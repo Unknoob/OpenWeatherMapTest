@@ -1,20 +1,29 @@
 PODS:
   - Alamofire (4.7.0)
+  - RxCocoa (4.2.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.2.0)
   - Unbox (3.0.0)
 
 DEPENDENCIES:
   - Alamofire (= 4.7)
+  - RxCocoa (= 4.2.0)
+  - RxSwift (= 4.2.0)
   - Unbox (= 3.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - RxCocoa
+    - RxSwift
     - Unbox
 
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
   Unbox: 9ed33b2a31f7a8a049f54b94d40c4a52a28c4d9d
 
-PODFILE CHECKSUM: c09e39db5fee687a539809c3dd29555f8f6fed9e
+PODFILE CHECKSUM: 3069ffcbe593be01297504f618177d662572a4da
 
 COCOAPODS: 1.5.3

@@ -6,6 +6,9 @@
 //  Copyright © 2018 Gabriel Beltrame Silva. All rights reserved.
 //
 
+import RxSwift
+import RxCocoa
+
 protocol ContainerPresenterProtocol: class {
     var viewController: ContainerViewControllerProtocol! { get set }
     var interactor: ContainerInteractorProtocol! { get set }

@@ -6,8 +6,13 @@
 //  Copyright © 2018 Gabriel Beltrame Silva. All rights reserved.
 //
 
+import RxSwift
+import RxCocoa
+
 class ContainerPresenter: ContainerPresenterProtocol {
     weak var viewController: ContainerViewControllerProtocol!
     var interactor: ContainerInteractorProtocol!
     var router: ContainerRouterProtocol!
+    var dispose = DisposeBag()
+    
 }

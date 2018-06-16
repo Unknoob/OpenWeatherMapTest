@@ -6,7 +6,6 @@
 //  Copyright © 2018 Gabriel Beltrame Silva. All rights reserved.
 //
 
-import Foundation
 import Alamofire
 
 public class NetworkManager {
@@ -23,7 +22,10 @@ public class NetworkManager {
     ///     - parameters: The request parameters.
     ///     - httpMethod: The request HTTP method.
     ///     - completion: The completion closure.
-    static func request(_ requestPath: String, parameters: JSONDictionary, parameterIsJSON: Bool, httpMethod: Alamofire.HTTPMethod, completion: @escaping (_ result: Result<JSONDictionary>) -> ()) {
+    static func request(_ requestPath: String, parameters: JSONDictionary, httpMethod: Alamofire.HTTPMethod, completion: @escaping (_ result: Result<JSONDictionary>) -> ()) {
+        
+        var completeParameters = parameters
+        completeParameters["APPID"] = "a6fa1ca81c402a4e8562c64b02e50bb6"
         
         Alamofire.request(kBaseURL + requestPath, method: httpMethod).responseJSON { response in
             switch response.result {
