@@ -28,6 +28,7 @@ class ContainerViewController: UIViewController, ContainerViewControllerProtocol
     override func viewDidLoad() {
         super.viewDidLoad()
         toggleListingType(self)
+        presenter.interactor.requestPermission()
     }
     
     override func didReceiveMemoryWarning() {

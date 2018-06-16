@@ -22,22 +22,20 @@ public class NetworkManager {
     ///     - parameters: The request parameters.
     ///     - httpMethod: The request HTTP method.
     ///     - completion: The completion closure.
-    static func request(_ requestPath: String, parameters: JSONDictionary, httpMethod: Alamofire.HTTPMethod, completion: @escaping (_ result: Result<JSONDictionary>) -> ()) {
+    static func request(_ requestPath: String, parameters: JSONDictionary, httpMethod: Alamofire.HTTPMethod, completion: @escaping (_ result: Result<Data>) -> ()) {
         
         var completeParameters = parameters
         completeParameters["APPID"] = "a6fa1ca81c402a4e8562c64b02e50bb6"
         
-        Alamofire.request(kBaseURL + requestPath, method: httpMethod).responseJSON { response in
+        Alamofire.request(kBaseURL + requestPath, method: httpMethod, parameters: completeParameters).responseJSON { response in
             switch response.result {
             case .success:
                 print("Request: \(String(describing: response.request))")   // original url request
                 print("Response: \(String(describing: response.response))") // http url response
                 print("Result: \(response.result)")
+                print("JSON: \(try! JSONSerialization.jsonObject(with: response.data!, options: .allowFragments))")
+                completion(.success(response.data!))
                 
-                if let json = response.result.value as? JSONDictionary {
-                    print("JSON: \(json)") // serialized json response
-                    completion(.success(json))
-                }
             case .failure(let error):
                 completion(.failure(error))
             }

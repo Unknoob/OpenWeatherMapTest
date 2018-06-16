@@ -6,18 +6,28 @@
 //  Copyright © 2018 Gabriel Beltrame Silva. All rights reserved.
 //
 
+import Foundation
+
 struct CityInformation: Codable {
-    let cityID: Int
-    let cityName: String
+    let id: Int
+    let name: String
     let coordinates: Coordinates
-    let currentTemperature: Double
-    let airPressure: Int
-    let airHumidity: Int
-    let minimumTemperature: Double
-    let maximumTemperature: Double
+    let mainInformation: MainInformation
     let date: Date
     let weatherList: [Weather]
     let rain: String?
     let snow: String?
-    let cloudPercentage: Int
+    let cloudInformation: CloudInformation
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case coordinates = "coord"
+        case mainInformation = "main"
+        case date = "dt"
+        case weatherList = "weather"
+        case rain
+        case snow
+        case cloudInformation = "clouds"
+    }
 }

@@ -15,4 +15,11 @@ class ContainerPresenter: ContainerPresenterProtocol {
     var router: ContainerRouterProtocol!
     var dispose = DisposeBag()
     
+    var currentLocation: Coordinates?
+    
+    func coordinatesUpdated(coordinates: Coordinates) {
+        self.currentLocation = coordinates
+        print(coordinates)
+    }
+    
 }

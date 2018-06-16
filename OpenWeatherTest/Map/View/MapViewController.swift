@@ -17,7 +17,6 @@ class MapViewController: UIViewController, MapViewControllerProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        LocationManager.requestUserPermission()
         mapView.showsUserLocation = true
     }
 

@@ -13,4 +13,6 @@ protocol ContainerPresenterProtocol: class {
     var viewController: ContainerViewControllerProtocol! { get set }
     var interactor: ContainerInteractorProtocol! { get set }
     var router: ContainerRouterProtocol! { get set }
+    
+    func coordinatesUpdated(coordinates: Coordinates)
 }

@@ -44,6 +44,8 @@
 		A761B94920D4A98900F81F86 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B94820D4A98900F81F86 /* Coordinates.swift */; };
 		A761B94B20D4ABEF00F81F86 /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B94A20D4ABEF00F81F86 /* Wind.swift */; };
 		A761B94D20D4AE2500F81F86 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B94C20D4AE2500F81F86 /* Weather.swift */; };
+		A761B94F20D54C1C00F81F86 /* MainInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B94E20D54C1C00F81F86 /* MainInformation.swift */; };
+		A761B95120D54D1000F81F86 /* CloudInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B95020D54D1000F81F86 /* CloudInformation.swift */; };
 		A7A16A2020D1DAFD003E1830 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A1F20D1DAFD003E1830 /* AppDelegate.swift */; };
 		A7A16A2220D1DAFD003E1830 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A2120D1DAFD003E1830 /* ListViewController.swift */; };
 		A7A16A2420D1DAFD003E1830 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A2320D1DAFD003E1830 /* MapViewController.swift */; };
@@ -114,6 +116,8 @@
 		A761B94820D4A98900F81F86 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		A761B94A20D4ABEF00F81F86 /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
 		A761B94C20D4AE2500F81F86 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		A761B94E20D54C1C00F81F86 /* MainInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInformation.swift; sourceTree = "<group>"; };
+		A761B95020D54D1000F81F86 /* CloudInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudInformation.swift; sourceTree = "<group>"; };
 		A7A16A1C20D1DAFD003E1830 /* OpenWeatherTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeatherTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A16A1F20D1DAFD003E1830 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7A16A2120D1DAFD003E1830 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -369,11 +373,13 @@
 		A761B94320D4A79800F81F86 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A761B94420D4A7BA00F81F86 /* WeatherList.swift */,
 				A761B94620D4A84300F81F86 /* CityInformation.swift */,
+				A761B95020D54D1000F81F86 /* CloudInformation.swift */,
 				A761B94820D4A98900F81F86 /* Coordinates.swift */,
-				A761B94A20D4ABEF00F81F86 /* Wind.swift */,
+				A761B94E20D54C1C00F81F86 /* MainInformation.swift */,
 				A761B94C20D4AE2500F81F86 /* Weather.swift */,
+				A761B94420D4A7BA00F81F86 /* WeatherList.swift */,
+				A761B94A20D4ABEF00F81F86 /* Wind.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -667,6 +673,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A761B95120D54D1000F81F86 /* CloudInformation.swift in Sources */,
 				A761B91520D48C2700F81F86 /* ListInteractorProtocol.swift in Sources */,
 				A761B91320D48C0F00F81F86 /* ListInteractor.swift in Sources */,
 				A761B93220D4992D00F81F86 /* MapRouter.swift in Sources */,
@@ -687,6 +694,7 @@
 				A761B94B20D4ABEF00F81F86 /* Wind.swift in Sources */,
 				A761B90B20D48BA800F81F86 /* ListPresenterProtocol.swift in Sources */,
 				A761B93420D4993500F81F86 /* MapRouterProtocol.swift in Sources */,
+				A761B94F20D54C1C00F81F86 /* MainInformation.swift in Sources */,
 				A7190B5520D48104003D62A5 /* ListRouter.swift in Sources */,
 				A761B92B20D493D000F81F86 /* ContainerViewControllerProtocol.swift in Sources */,
 				A7190B4420D4731D003D62A5 /* LocationManager.swift in Sources */,

@@ -8,4 +8,6 @@
 
 protocol ContainerInteractorProtocol: class {
     var presenter: ContainerPresenterProtocol? { get set }
+    
+    func requestPermission()
 }

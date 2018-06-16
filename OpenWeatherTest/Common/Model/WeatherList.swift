@@ -9,9 +9,15 @@
 import Foundation
 
 struct WeatherList: Codable {
-    let mesage: String
+    let message: String
     let cod: String
     let count: Int
     let citiesList: [CityInformation]
     
+    enum CodingKeys: String, CodingKey {
+        case message
+        case cod
+        case count
+        case citiesList = "list"
+    }
 }
