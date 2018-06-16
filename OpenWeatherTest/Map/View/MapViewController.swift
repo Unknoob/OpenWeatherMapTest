@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  OpenWeatherTest
 //
 //  Created by Gabriel Beltrame Silva on 13/06/18.
@@ -7,17 +7,22 @@
 //
 
 import UIKit
+import MapKit
 
-class ListViewController: UIViewController {
+class MapViewController: UIViewController, MapViewControllerProtocol {
 
+    @IBOutlet weak var mapView: MKMapView!
+    
+    var presenter: MapPresenterProtocol!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        LocationManager.requestUserPermission()
+        mapView.showsUserLocation = true
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 

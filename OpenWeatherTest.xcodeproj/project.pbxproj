@@ -8,6 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		1E69F11A64CEA14EAE98E243 /* Pods_OpenWeatherTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 947FC376B2A44088AAFB0378 /* Pods_OpenWeatherTestUITests.framework */; };
+		A7190B4020D46F00003D62A5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7190B3F20D46F00003D62A5 /* NetworkManager.swift */; };
+		A7190B4220D46F5F003D62A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7190B4120D46F5F003D62A5 /* Constants.swift */; };
+		A7190B4420D4731D003D62A5 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7190B4320D4731D003D62A5 /* LocationManager.swift */; };
+		A7190B4620D4751B003D62A5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7190B4520D4751B003D62A5 /* MapKit.framework */; };
+		A7190B4820D47A77003D62A5 /* NavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7190B4720D47A77003D62A5 /* NavigationHelper.swift */; };
+		A7190B4D20D4802C003D62A5 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7190B4C20D4802C003D62A5 /* RootRouter.swift */; };
+		A7190B5020D4804D003D62A5 /* RootRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7190B4F20D4804D003D62A5 /* RootRouterProtocol.swift */; };
+		A7190B5320D480F7003D62A5 /* ListRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7190B5220D480F7003D62A5 /* ListRouterProtocol.swift */; };
+		A7190B5520D48104003D62A5 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7190B5420D48104003D62A5 /* ListRouter.swift */; };
+		A761B90520D4884200F81F86 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B90420D4884200F81F86 /* ContainerViewController.swift */; };
+		A761B90920D48B9100F81F86 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B90820D48B9100F81F86 /* ListPresenter.swift */; };
+		A761B90B20D48BA800F81F86 /* ListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B90A20D48BA800F81F86 /* ListPresenterProtocol.swift */; };
+		A761B91320D48C0F00F81F86 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B91220D48C0F00F81F86 /* ListInteractor.swift */; };
+		A761B91520D48C2700F81F86 /* ListInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B91420D48C2600F81F86 /* ListInteractorProtocol.swift */; };
+		A761B91D20D48E1000F81F86 /* ListViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B91C20D48E1000F81F86 /* ListViewControllerProtocol.swift */; };
+		A761B92020D4922E00F81F86 /* ContainerPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B91F20D4922E00F81F86 /* ContainerPresenterProtocol.swift */; };
+		A761B92220D4924000F81F86 /* ContainerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B92120D4924000F81F86 /* ContainerPresenter.swift */; };
+		A761B92620D4939D00F81F86 /* ContainerRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B92520D4939D00F81F86 /* ContainerRouterProtocol.swift */; };
+		A761B92820D493A800F81F86 /* ContainerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B92720D493A800F81F86 /* ContainerRouter.swift */; };
+		A761B92B20D493D000F81F86 /* ContainerViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B92A20D493D000F81F86 /* ContainerViewControllerProtocol.swift */; };
+		A761B92D20D494AA00F81F86 /* ContainerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B92C20D494AA00F81F86 /* ContainerInteractor.swift */; };
+		A761B92F20D494B500F81F86 /* ContainerInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B92E20D494B500F81F86 /* ContainerInteractorProtocol.swift */; };
+		A761B93220D4992D00F81F86 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93120D4992D00F81F86 /* MapRouter.swift */; };
+		A761B93420D4993500F81F86 /* MapRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93320D4993500F81F86 /* MapRouterProtocol.swift */; };
+		A761B93620D4993E00F81F86 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93520D4993E00F81F86 /* MapPresenter.swift */; };
+		A761B93820D4994D00F81F86 /* MapPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93720D4994D00F81F86 /* MapPresenterProtocol.swift */; };
+		A761B93A20D4995F00F81F86 /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93920D4995F00F81F86 /* MapInteractor.swift */; };
+		A761B93C20D4996800F81F86 /* MapInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93B20D4996800F81F86 /* MapInteractorProtocol.swift */; };
+		A761B93E20D49AF500F81F86 /* MapViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93D20D49AF500F81F86 /* MapViewControllerProtocol.swift */; };
 		A7A16A2020D1DAFD003E1830 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A1F20D1DAFD003E1830 /* AppDelegate.swift */; };
 		A7A16A2220D1DAFD003E1830 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A2120D1DAFD003E1830 /* ListViewController.swift */; };
 		A7A16A2420D1DAFD003E1830 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A2320D1DAFD003E1830 /* MapViewController.swift */; };
@@ -44,6 +73,35 @@
 		947FC376B2A44088AAFB0378 /* Pods_OpenWeatherTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenWeatherTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		989871E5AA6A5C18AD1CDCDC /* Pods-OpenWeatherTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWeatherTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenWeatherTest/Pods-OpenWeatherTest.release.xcconfig"; sourceTree = "<group>"; };
 		A34C5B42B05C62BD9565D493 /* Pods-OpenWeatherTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWeatherTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenWeatherTestUITests/Pods-OpenWeatherTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A7190B3F20D46F00003D62A5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A7190B4120D46F5F003D62A5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A7190B4320D4731D003D62A5 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		A7190B4520D4751B003D62A5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A7190B4720D47A77003D62A5 /* NavigationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHelper.swift; sourceTree = "<group>"; };
+		A7190B4C20D4802C003D62A5 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		A7190B4F20D4804D003D62A5 /* RootRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouterProtocol.swift; sourceTree = "<group>"; };
+		A7190B5220D480F7003D62A5 /* ListRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterProtocol.swift; sourceTree = "<group>"; };
+		A7190B5420D48104003D62A5 /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
+		A761B90420D4884200F81F86 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		A761B90820D48B9100F81F86 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
+		A761B90A20D48BA800F81F86 /* ListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterProtocol.swift; sourceTree = "<group>"; };
+		A761B91220D48C0F00F81F86 /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		A761B91420D48C2600F81F86 /* ListInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractorProtocol.swift; sourceTree = "<group>"; };
+		A761B91C20D48E1000F81F86 /* ListViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewControllerProtocol.swift; sourceTree = "<group>"; };
+		A761B91F20D4922E00F81F86 /* ContainerPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerPresenterProtocol.swift; sourceTree = "<group>"; };
+		A761B92120D4924000F81F86 /* ContainerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerPresenter.swift; sourceTree = "<group>"; };
+		A761B92520D4939D00F81F86 /* ContainerRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerRouterProtocol.swift; sourceTree = "<group>"; };
+		A761B92720D493A800F81F86 /* ContainerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerRouter.swift; sourceTree = "<group>"; };
+		A761B92A20D493D000F81F86 /* ContainerViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerProtocol.swift; sourceTree = "<group>"; };
+		A761B92C20D494AA00F81F86 /* ContainerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerInteractor.swift; sourceTree = "<group>"; };
+		A761B92E20D494B500F81F86 /* ContainerInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerInteractorProtocol.swift; sourceTree = "<group>"; };
+		A761B93120D4992D00F81F86 /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
+		A761B93320D4993500F81F86 /* MapRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouterProtocol.swift; sourceTree = "<group>"; };
+		A761B93520D4993E00F81F86 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
+		A761B93720D4994D00F81F86 /* MapPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenterProtocol.swift; sourceTree = "<group>"; };
+		A761B93920D4995F00F81F86 /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
+		A761B93B20D4996800F81F86 /* MapInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractorProtocol.swift; sourceTree = "<group>"; };
+		A761B93D20D49AF500F81F86 /* MapViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerProtocol.swift; sourceTree = "<group>"; };
 		A7A16A1C20D1DAFD003E1830 /* OpenWeatherTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeatherTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A16A1F20D1DAFD003E1830 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7A16A2120D1DAFD003E1830 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7190B4620D4751B003D62A5 /* MapKit.framework in Frameworks */,
 				C4C23E411D32D2396C06CC27 /* Pods_OpenWeatherTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +166,7 @@
 		82D41E3F3D610868C2C67DD7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A7190B4520D4751B003D62A5 /* MapKit.framework */,
 				E2026D95EF15C8E14E968E07 /* Pods_OpenWeatherTest.framework */,
 				CEFD05ECB2B02AF33E038EFF /* Pods_OpenWeatherTestTests.framework */,
 				947FC376B2A44088AAFB0378 /* Pods_OpenWeatherTestUITests.framework */,
@@ -119,6 +179,7 @@
 			children = (
 				A7190B3820D1F2C3003D62A5 /* Interactor */,
 				A7190B3720D1F2BC003D62A5 /* Presenter */,
+				A7190B5120D480E9003D62A5 /* Router */,
 				A7190B3620D1F2B4003D62A5 /* View */,
 			);
 			path = List;
@@ -127,6 +188,8 @@
 		A7190B3620D1F2B4003D62A5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A7A16A2120D1DAFD003E1830 /* ListViewController.swift */,
+				A761B91C20D48E1000F81F86 /* ListViewControllerProtocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -134,6 +197,8 @@
 		A7190B3720D1F2BC003D62A5 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				A761B90820D48B9100F81F86 /* ListPresenter.swift */,
+				A761B90A20D48BA800F81F86 /* ListPresenterProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -141,6 +206,8 @@
 		A7190B3820D1F2C3003D62A5 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				A761B91220D48C0F00F81F86 /* ListInteractor.swift */,
+				A761B91420D48C2600F81F86 /* ListInteractorProtocol.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -150,6 +217,7 @@
 			children = (
 				A7190B3A20D1F2CE003D62A5 /* Interactor */,
 				A7190B3B20D1F2D3003D62A5 /* Presenter */,
+				A761B93020D495EE00F81F86 /* Router */,
 				A7190B3C20D1F2D7003D62A5 /* View */,
 			);
 			path = Map;
@@ -158,6 +226,8 @@
 		A7190B3A20D1F2CE003D62A5 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				A761B93920D4995F00F81F86 /* MapInteractor.swift */,
+				A761B93B20D4996800F81F86 /* MapInteractorProtocol.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -165,6 +235,8 @@
 		A7190B3B20D1F2D3003D62A5 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				A761B93520D4993E00F81F86 /* MapPresenter.swift */,
+				A761B93720D4994D00F81F86 /* MapPresenterProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -172,6 +244,8 @@
 		A7190B3C20D1F2D7003D62A5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A7A16A2320D1DAFD003E1830 /* MapViewController.swift */,
+				A761B93D20D49AF500F81F86 /* MapViewControllerProtocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +260,99 @@
 				A7A16A2520D1DAFD003E1830 /* Main.storyboard */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		A7190B3E20D46ED1003D62A5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A7190B4120D46F5F003D62A5 /* Constants.swift */,
+				A7190B4320D4731D003D62A5 /* LocationManager.swift */,
+				A7190B4720D47A77003D62A5 /* NavigationHelper.swift */,
+				A7190B3F20D46F00003D62A5 /* NetworkManager.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A7190B4A20D47FEF003D62A5 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				A7190B4B20D48022003D62A5 /* Router */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		A7190B4B20D48022003D62A5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A7190B4C20D4802C003D62A5 /* RootRouter.swift */,
+				A7190B4F20D4804D003D62A5 /* RootRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A7190B5120D480E9003D62A5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A7190B5420D48104003D62A5 /* ListRouter.swift */,
+				A7190B5220D480F7003D62A5 /* ListRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A761B90220D4881F00F81F86 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				A761B92420D492EE00F81F86 /* Interactor */,
+				A761B91E20D491B200F81F86 /* Presenter */,
+				A761B92320D492E900F81F86 /* Router */,
+				A761B90320D4882C00F81F86 /* View */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		A761B90320D4882C00F81F86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A761B90420D4884200F81F86 /* ContainerViewController.swift */,
+				A761B92A20D493D000F81F86 /* ContainerViewControllerProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A761B91E20D491B200F81F86 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A761B92120D4924000F81F86 /* ContainerPresenter.swift */,
+				A761B91F20D4922E00F81F86 /* ContainerPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A761B92320D492E900F81F86 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A761B92720D493A800F81F86 /* ContainerRouter.swift */,
+				A761B92520D4939D00F81F86 /* ContainerRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A761B92420D492EE00F81F86 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				A761B92C20D494AA00F81F86 /* ContainerInteractor.swift */,
+				A761B92E20D494B500F81F86 /* ContainerInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		A761B93020D495EE00F81F86 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A761B93120D4992D00F81F86 /* MapRouter.swift */,
+				A761B93320D4993500F81F86 /* MapRouterProtocol.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		A7A16A1320D1DAFD003E1830 = {
@@ -214,10 +381,11 @@
 			isa = PBXGroup;
 			children = (
 				A7190B3D20D1F2E6003D62A5 /* Application */,
+				A7190B3E20D46ED1003D62A5 /* Common */,
+				A761B90220D4881F00F81F86 /* Container */,
 				A7190B3520D1F2AA003D62A5 /* List */,
-				A7A16A2120D1DAFD003E1830 /* ListViewController.swift */,
 				A7190B3920D1F2CA003D62A5 /* Map */,
-				A7A16A2320D1DAFD003E1830 /* MapViewController.swift */,
+				A7190B4A20D47FEF003D62A5 /* Root */,
 			);
 			path = OpenWeatherTest;
 			sourceTree = "<group>";
@@ -313,6 +481,11 @@
 				TargetAttributes = {
 					A7A16A1B20D1DAFD003E1830 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					A7A16A3120D1DAFE003E1830 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -467,9 +640,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A761B91520D48C2700F81F86 /* ListInteractorProtocol.swift in Sources */,
+				A761B91320D48C0F00F81F86 /* ListInteractor.swift in Sources */,
+				A761B93220D4992D00F81F86 /* MapRouter.swift in Sources */,
+				A761B93C20D4996800F81F86 /* MapInteractorProtocol.swift in Sources */,
+				A761B92820D493A800F81F86 /* ContainerRouter.swift in Sources */,
+				A761B92020D4922E00F81F86 /* ContainerPresenterProtocol.swift in Sources */,
+				A761B92F20D494B500F81F86 /* ContainerInteractorProtocol.swift in Sources */,
+				A7190B4D20D4802C003D62A5 /* RootRouter.swift in Sources */,
+				A761B92220D4924000F81F86 /* ContainerPresenter.swift in Sources */,
+				A761B93E20D49AF500F81F86 /* MapViewControllerProtocol.swift in Sources */,
+				A7190B4220D46F5F003D62A5 /* Constants.swift in Sources */,
+				A761B93820D4994D00F81F86 /* MapPresenterProtocol.swift in Sources */,
+				A761B92620D4939D00F81F86 /* ContainerRouterProtocol.swift in Sources */,
+				A7190B4020D46F00003D62A5 /* NetworkManager.swift in Sources */,
+				A761B93620D4993E00F81F86 /* MapPresenter.swift in Sources */,
+				A7190B4820D47A77003D62A5 /* NavigationHelper.swift in Sources */,
+				A761B90B20D48BA800F81F86 /* ListPresenterProtocol.swift in Sources */,
+				A761B93420D4993500F81F86 /* MapRouterProtocol.swift in Sources */,
+				A7190B5520D48104003D62A5 /* ListRouter.swift in Sources */,
+				A761B92B20D493D000F81F86 /* ContainerViewControllerProtocol.swift in Sources */,
+				A7190B4420D4731D003D62A5 /* LocationManager.swift in Sources */,
 				A7A16A2420D1DAFD003E1830 /* MapViewController.swift in Sources */,
+				A7190B5320D480F7003D62A5 /* ListRouterProtocol.swift in Sources */,
 				A7A16A2020D1DAFD003E1830 /* AppDelegate.swift in Sources */,
+				A7190B5020D4804D003D62A5 /* RootRouterProtocol.swift in Sources */,
+				A761B90920D48B9100F81F86 /* ListPresenter.swift in Sources */,
+				A761B91D20D48E1000F81F86 /* ListViewControllerProtocol.swift in Sources */,
+				A761B92D20D494AA00F81F86 /* ContainerInteractor.swift in Sources */,
+				A761B90520D4884200F81F86 /* ContainerViewController.swift in Sources */,
 				A7A16A2220D1DAFD003E1830 /* ListViewController.swift in Sources */,
+				A761B93A20D4995F00F81F86 /* MapInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
