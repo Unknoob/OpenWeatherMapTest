@@ -37,12 +37,12 @@
 		A761B93A20D4995F00F81F86 /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93920D4995F00F81F86 /* MapInteractor.swift */; };
 		A761B93C20D4996800F81F86 /* MapInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93B20D4996800F81F86 /* MapInteractorProtocol.swift */; };
 		A761B93E20D49AF500F81F86 /* MapViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93D20D49AF500F81F86 /* MapViewControllerProtocol.swift */; };
+		A761B94120D49F6F00F81F86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A761B93F20D49F6F00F81F86 /* Main.storyboard */; };
+		A761B94220D49F6F00F81F86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A761B94020D49F6F00F81F86 /* LaunchScreen.storyboard */; };
 		A7A16A2020D1DAFD003E1830 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A1F20D1DAFD003E1830 /* AppDelegate.swift */; };
 		A7A16A2220D1DAFD003E1830 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A2120D1DAFD003E1830 /* ListViewController.swift */; };
 		A7A16A2420D1DAFD003E1830 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A2320D1DAFD003E1830 /* MapViewController.swift */; };
-		A7A16A2720D1DAFD003E1830 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7A16A2520D1DAFD003E1830 /* Main.storyboard */; };
 		A7A16A2920D1DAFE003E1830 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7A16A2820D1DAFE003E1830 /* Assets.xcassets */; };
-		A7A16A2C20D1DAFE003E1830 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7A16A2A20D1DAFE003E1830 /* LaunchScreen.storyboard */; };
 		A7A16A3720D1DAFE003E1830 /* OpenWeatherTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A3620D1DAFE003E1830 /* OpenWeatherTestTests.swift */; };
 		A7A16A4220D1DAFE003E1830 /* OpenWeatherTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A4120D1DAFE003E1830 /* OpenWeatherTestUITests.swift */; };
 		C4C23E411D32D2396C06CC27 /* Pods_OpenWeatherTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2026D95EF15C8E14E968E07 /* Pods_OpenWeatherTest.framework */; };
@@ -102,13 +102,13 @@
 		A761B93920D4995F00F81F86 /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
 		A761B93B20D4996800F81F86 /* MapInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractorProtocol.swift; sourceTree = "<group>"; };
 		A761B93D20D49AF500F81F86 /* MapViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerProtocol.swift; sourceTree = "<group>"; };
+		A761B93F20D49F6F00F81F86 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A761B94020D49F6F00F81F86 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7A16A1C20D1DAFD003E1830 /* OpenWeatherTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeatherTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A16A1F20D1DAFD003E1830 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7A16A2120D1DAFD003E1830 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		A7A16A2320D1DAFD003E1830 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		A7A16A2620D1DAFD003E1830 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A7A16A2820D1DAFE003E1830 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A7A16A2B20D1DAFE003E1830 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7A16A2D20D1DAFE003E1830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7A16A3220D1DAFE003E1830 /* OpenWeatherTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenWeatherTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A16A3620D1DAFE003E1830 /* OpenWeatherTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherTestTests.swift; sourceTree = "<group>"; };
@@ -253,11 +253,11 @@
 		A7190B3D20D1F2E6003D62A5 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				A761B94020D49F6F00F81F86 /* LaunchScreen.storyboard */,
+				A761B93F20D49F6F00F81F86 /* Main.storyboard */,
 				A7A16A1F20D1DAFD003E1830 /* AppDelegate.swift */,
 				A7A16A2820D1DAFE003E1830 /* Assets.xcassets */,
 				A7A16A2D20D1DAFE003E1830 /* Info.plist */,
-				A7A16A2A20D1DAFE003E1830 /* LaunchScreen.storyboard */,
-				A7A16A2520D1DAFD003E1830 /* Main.storyboard */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -522,9 +522,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7A16A2C20D1DAFE003E1830 /* LaunchScreen.storyboard in Resources */,
+				A761B94220D49F6F00F81F86 /* LaunchScreen.storyboard in Resources */,
 				A7A16A2920D1DAFE003E1830 /* Assets.xcassets in Resources */,
-				A7A16A2720D1DAFD003E1830 /* Main.storyboard in Resources */,
+				A761B94120D49F6F00F81F86 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,25 +704,6 @@
 			targetProxy = A7A16A3E20D1DAFE003E1830 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		A7A16A2520D1DAFD003E1830 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A7A16A2620D1DAFD003E1830 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A7A16A2A20D1DAFE003E1830 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A7A16A2B20D1DAFE003E1830 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A7A16A4420D1DAFE003E1830 /* Debug */ = {
