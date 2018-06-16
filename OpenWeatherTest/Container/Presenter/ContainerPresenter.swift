@@ -15,11 +15,18 @@ class ContainerPresenter: ContainerPresenterProtocol {
     var router: ContainerRouterProtocol!
     var dispose = DisposeBag()
     
+    weak var listPresenter: ListPresenterProtocol?
+    weak var mapPresenter: MapPresenterProtocol?
+    
     var currentLocation: Coordinates?
     
     func coordinatesUpdated(coordinates: Coordinates) {
         self.currentLocation = coordinates
-        print(coordinates)
+    }
+    
+    func cityInformationUpdated(cityInformation: [CityInformation]) {
+        listPresenter?.cityInformationUpdated(cityInformation: cityInformation)
+        mapPresenter?.cityInformationUpdated(cityInformation: cityInformation)
     }
     
 }

@@ -15,4 +15,5 @@ protocol ContainerPresenterProtocol: class {
     var router: ContainerRouterProtocol! { get set }
     
     func coordinatesUpdated(coordinates: Coordinates)
+    func cityInformationUpdated(cityInformation: [CityInformation])
 }

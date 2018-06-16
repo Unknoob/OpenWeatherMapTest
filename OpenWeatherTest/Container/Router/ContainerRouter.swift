@@ -14,6 +14,9 @@ class ContainerRouter: ContainerRouterProtocol {
     static func build() -> ContainerViewController {
         let containerViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ContainerViewController") as! ContainerViewController
         
+        containerViewController.listViewController = ListRouter.build()
+        containerViewController.mapViewController = MapRouter.build()
+        
         let presenter = ContainerPresenter()
         let interactor = ContainerInteractor()
         let router = ContainerRouter()
@@ -26,6 +29,8 @@ class ContainerRouter: ContainerRouterProtocol {
         presenter.viewController = containerViewController
         presenter.interactor = interactor
         presenter.router = router
+        presenter.listPresenter = containerViewController.listViewController.presenter
+        presenter.mapPresenter = containerViewController.mapViewController.presenter
         
         return containerViewController
     }

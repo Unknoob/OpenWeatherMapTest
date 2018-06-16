@@ -10,4 +10,8 @@ class ListPresenter: ListPresenterProtocol {
     weak var viewController: ListViewControllerProtocol!
     var interactor: ListInteractorProtocol!
     var router: ListRouterProtocol!
+    
+    func cityInformationUpdated(cityInformation: [CityInformation]) {
+        viewController.updateCityInformation(cityInformationList: cityInformation)
+    }
 }

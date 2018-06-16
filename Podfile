@@ -6,9 +6,9 @@ target 'OpenWeatherTest' do
 
   # Pods for OpenWeatherTest
   pod 'Alamofire', '4.7'
-  pod 'Unbox', '3.0.0'
   pod 'RxSwift', '4.2.0'
   pod 'RxCocoa', '4.2.0'
+  pod 'Kingfisher', '4.8.0'
 
   target 'OpenWeatherTestTests' do
     inherit! :search_paths

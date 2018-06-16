@@ -8,4 +8,5 @@
 
 protocol ListViewControllerProtocol: class {
     var presenter: ListPresenterProtocol! { get set }
+    func updateCityInformation(cityInformationList: [CityInformation])
 }

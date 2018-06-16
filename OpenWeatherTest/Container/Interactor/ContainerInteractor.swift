@@ -17,7 +17,7 @@ class ContainerInteractor: NSObject, ContainerInteractorProtocol, CLLocationMana
     
     let locationManager = CLLocationManager()
     let dispose = DisposeBag()
-    var timer: Timer?
+    var lastTimeFetched: Date?
     
     var lastLocationFetched: CLLocation?
     var currentLocation: CLLocation? {
@@ -77,11 +77,10 @@ class ContainerInteractor: NSObject, ContainerInteractorProtocol, CLLocationMana
                 self.isFetching = false
                 switch result {
                 case .success(let jsonData):
-                    print("YES")
                     self.lastLocationFetched = currentLocation
                     do {
                         let weatherInfo: WeatherList = try JSONDecoder().decode(WeatherList.self, from: jsonData)
-                        print(weatherInfo)
+                        self.presenter?.cityInformationUpdated(cityInformation: weatherInfo.citiesList)
                     } catch {
                         print("Decoding Error: \(error)")
                     }

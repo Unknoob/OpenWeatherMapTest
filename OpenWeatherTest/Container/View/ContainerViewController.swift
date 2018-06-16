@@ -13,13 +13,9 @@ class ContainerViewController: UIViewController, ContainerViewControllerProtocol
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var listingToggleButton: UIBarButtonItem!
     
-    private lazy var listViewController: ListViewController = {
-        return ListRouter.build()
-    }()
+    var listViewController: ListViewController!
     
-    private lazy var mapViewController: MapViewController = {
-        return MapRouter.build()
-    }()
+    var mapViewController: MapViewController!
     
     var presenter: ContainerPresenterProtocol!
     

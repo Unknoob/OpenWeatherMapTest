@@ -8,12 +8,16 @@
 
 import UIKit
 import MapKit
+import RxSwift
+import RxCocoa
 
 class MapViewController: UIViewController, MapViewControllerProtocol {
 
     @IBOutlet weak var mapView: MKMapView!
     
     var presenter: MapPresenterProtocol!
+    var cityInformationList: [CityInformation] = []
+    var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +28,9 @@ class MapViewController: UIViewController, MapViewControllerProtocol {
         super.didReceiveMemoryWarning()
     }
 
+    func updateCityInformation(cityInformationList: [CityInformation]) {
+        self.cityInformationList = cityInformationList
+    }
 
 }
 

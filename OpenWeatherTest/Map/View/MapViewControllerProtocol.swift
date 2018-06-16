@@ -8,4 +8,5 @@
 
 protocol MapViewControllerProtocol: class {
     var presenter: MapPresenterProtocol! { get set }
+    func updateCityInformation(cityInformationList: [CityInformation])
 }
