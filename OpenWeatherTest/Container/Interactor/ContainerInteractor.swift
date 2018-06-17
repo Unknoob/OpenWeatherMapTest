@@ -42,8 +42,6 @@ class ContainerInteractor: NSObject, ContainerInteractorProtocol, CLLocationMana
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
-            //            setupTimer()
-            //            getWeatherInformationIfNeeded()
         }
     }
     
@@ -74,18 +72,21 @@ class ContainerInteractor: NSObject, ContainerInteractorProtocol, CLLocationMana
             parameters["lon"] = currentLocation.coordinate.longitude
             
             NetworkManager.request("find", parameters: parameters, httpMethod: .get) { result in
-                self.isFetching = false
+                
                 switch result {
                 case .success(let jsonData):
                     self.lastLocationFetched = currentLocation
                     do {
                         let weatherInfo: WeatherList = try JSONDecoder().decode(WeatherList.self, from: jsonData)
                         self.presenter?.cityInformationUpdated(cityInformation: weatherInfo.citiesList)
+                        self.isFetching = false
                     } catch {
                         print("Decoding Error: \(error)")
+                        self.isFetching = false
                     }
                 case .failure(let error):
                     print("NO")
+                    self.isFetching = false
                 }
             }
         }

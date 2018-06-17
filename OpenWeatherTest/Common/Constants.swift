@@ -18,9 +18,14 @@ public enum Result<Value> {
     case success(Value)
 }
 
-public enum ViewType {
-    case list
-    case map
+public enum ViewType: String {
+    case list = "List"
+    case map = "Map"
+}
+
+public enum TemperatureUnit {
+    case celsius
+    case fahrenheit
 }
 
 /// A normal Dictionary

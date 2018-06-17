@@ -10,7 +10,7 @@ import Foundation
 
 struct MainInformation: Codable {
     let currentTemperature: Double
-    let airPressure: Int
+    let airPressure: Double
     let airHumidity: Int
     let minimumTemperature: Double
     let maximumTemperature: Double

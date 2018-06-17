@@ -15,8 +15,8 @@ struct CityInformation: Codable {
     let mainInformation: MainInformation
     let date: Date
     let weatherList: [Weather]
-    let rain: String?
-    let snow: String?
+//    let rain: String?
+//    let snow: String?
     let cloudInformation: CloudInformation
     
     enum CodingKeys: String, CodingKey {
@@ -26,8 +26,8 @@ struct CityInformation: Codable {
         case mainInformation = "main"
         case date = "dt"
         case weatherList = "weather"
-        case rain
-        case snow
+//        case rain
+//        case snow
         case cloudInformation = "clouds"
     }
 }

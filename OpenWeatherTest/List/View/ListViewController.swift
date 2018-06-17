@@ -16,14 +16,20 @@ class ListViewController: UIViewController, ListViewControllerProtocol {
     
     var presenter: ListPresenterProtocol!
     var cityInformationList: Variable<[CityInformation]> = Variable([])
+    var selectedUnit: Variable<TemperatureUnit> = Variable(.celsius)
     var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         cityInformationList.asObservable().bind(to: tableView.rx.items(cellIdentifier: "ListTableViewCell", cellType: ListTableViewCell.self)) { (_, cityInformation: CityInformation, cell: ListTableViewCell) in
-            cell.fill(withCityInformation: cityInformation)
+            cell.fill(withCityInformation: cityInformation, andUnit: self.selectedUnit.value)
+            self.selectedUnit.asObservable().subscribe({ (temperature) in
+                cell.selectedUnit.value = temperature.element!
+            }).disposed(by: cell.disposeBag)
+            
         }.disposed(by: disposeBag)
+        
     }
 
     func updateCityInformation(cityInformationList: [CityInformation]) {

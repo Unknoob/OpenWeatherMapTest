@@ -7,24 +7,31 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ContainerViewController: UIViewController, ContainerViewControllerProtocol {
     
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var customNavigation: UINavigationItem!
     @IBOutlet weak var listingToggleButton: UIBarButtonItem!
+    @IBOutlet weak var unitToggleButton: UIBarButtonItem!
     
     var listViewController: ListViewController!
-    
     var mapViewController: MapViewController!
-    
     var presenter: ContainerPresenterProtocol!
-    
     var activeView: ViewType = .list
+    var selectedUnit: Variable<TemperatureUnit> = Variable(.celsius)
+    var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         toggleListingType(self)
         presenter.interactor.requestPermission()
+    
+        selectedUnit.asObservable().subscribe({ (temperature) in
+            self.listViewController.selectedUnit.value = temperature.element!
+        }).disposed(by: disposeBag)
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,7 +41,6 @@ class ContainerViewController: UIViewController, ContainerViewControllerProtocol
     @IBAction func toggleListingType(_ sender: Any) {
         switch activeView {
         case .list:
-            listingToggleButton.title = "Map"
             mapViewController.willMove(toParentViewController: nil)
             mapViewController.view.removeFromSuperview()
             mapViewController.removeFromParentViewController()
@@ -46,9 +52,10 @@ class ContainerViewController: UIViewController, ContainerViewControllerProtocol
             listViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             listViewController.didMove(toParentViewController: self)
             
-            self.activeView = .map
+            customNavigation.title = activeView.rawValue
+            activeView = .map
+            listingToggleButton.title = activeView.rawValue
         case .map:
-            listingToggleButton.title = "List"
             listViewController.willMove(toParentViewController: nil)
             listViewController.view.removeFromSuperview()
             listViewController.removeFromParentViewController()
@@ -60,7 +67,22 @@ class ContainerViewController: UIViewController, ContainerViewControllerProtocol
             mapViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             mapViewController.didMove(toParentViewController: self)
             
-            self.activeView = .list
+            customNavigation.title = activeView.rawValue
+            activeView = .list
+            listingToggleButton.title = activeView.rawValue
+        }
+    }
+    
+    @IBAction func toggleTemperatureUnit(_ sender: Any) {
+        switch selectedUnit.value {
+        case .celsius:
+            unitToggleButton.title = "C"
+            self.selectedUnit.value = .fahrenheit
+        case .fahrenheit:
+            unitToggleButton.title = "F"
+
+            
+            self.selectedUnit.value = .celsius
         }
     }
 }

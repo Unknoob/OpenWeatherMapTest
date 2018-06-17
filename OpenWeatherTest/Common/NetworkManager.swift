@@ -26,6 +26,7 @@ public class NetworkManager {
         
         var completeParameters = parameters
         completeParameters["APPID"] = "a6fa1ca81c402a4e8562c64b02e50bb6"
+        completeParameters["cnt"] = 50
         
         Alamofire.request(kBaseURL + requestPath, method: httpMethod, parameters: completeParameters).responseJSON { response in
             switch response.result {
