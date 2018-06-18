@@ -6,7 +6,10 @@
 //  Copyright © 2018 Gabriel Beltrame Silva. All rights reserved.
 //
 
+import CoreLocation
+
 protocol MapViewControllerProtocol: class {
     var presenter: MapPresenterProtocol! { get set }
-    func updateCityInformation(cityInformationList: [CityInformation])
+    func cityInformationUpdated(cityInformationList: [CityInformation])
+    func locationUpdated(location: CLLocation)
 }

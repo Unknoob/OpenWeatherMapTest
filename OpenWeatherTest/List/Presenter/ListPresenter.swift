@@ -6,12 +6,18 @@
 //  Copyright © 2018 Gabriel Beltrame Silva. All rights reserved.
 //
 
+import CoreLocation
+
 class ListPresenter: ListPresenterProtocol {
     weak var viewController: ListViewControllerProtocol!
     var interactor: ListInteractorProtocol!
     var router: ListRouterProtocol!
     
     func cityInformationUpdated(cityInformation: [CityInformation]) {
-        viewController.updateCityInformation(cityInformationList: cityInformation)
+        viewController.cityInformationUpdated(cityInformationList: cityInformation)
+    }
+    
+    func locationUpdated(location: CLLocation) {
+        viewController.locationUpdated(location: location)
     }
 }

@@ -8,6 +8,7 @@
 
 import RxSwift
 import RxCocoa
+import CoreLocation
 
 class ContainerPresenter: ContainerPresenterProtocol {
     weak var viewController: ContainerViewControllerProtocol!
@@ -18,10 +19,10 @@ class ContainerPresenter: ContainerPresenterProtocol {
     weak var listPresenter: ListPresenterProtocol?
     weak var mapPresenter: MapPresenterProtocol?
     
-    var currentLocation: Coordinates?
-    
-    func coordinatesUpdated(coordinates: Coordinates) {
-        self.currentLocation = coordinates
+    func locationUpdated(location: CLLocation) {
+        self.viewController.locationUpdated(location: location)
+        listPresenter?.locationUpdated(location: location)
+        mapPresenter?.locationUpdated(location: location)
     }
     
     func cityInformationUpdated(cityInformation: [CityInformation]) {

@@ -93,9 +93,9 @@ class ContainerInteractor: NSObject, ContainerInteractorProtocol, CLLocationMana
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.last {
-            currentLocation = locations.last
-            presenter?.coordinatesUpdated(coordinates: Coordinates(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
+        if let lastLocation = locations.last {
+            currentLocation = lastLocation
+            presenter?.locationUpdated(location: lastLocation)
         }
     }
     

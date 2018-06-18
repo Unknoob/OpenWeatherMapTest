@@ -6,6 +6,9 @@
 //  Copyright © 2018 Gabriel Beltrame Silva. All rights reserved.
 //
 
+import CoreLocation
+
 protocol ContainerViewControllerProtocol: class {
     var presenter: ContainerPresenterProtocol! { get set }
+    func locationUpdated(location: CLLocation)
 }

@@ -6,7 +6,10 @@
 //  Copyright © 2018 Gabriel Beltrame Silva. All rights reserved.
 //
 
+import CoreLocation
+
 protocol ListViewControllerProtocol: class {
     var presenter: ListPresenterProtocol! { get set }
-    func updateCityInformation(cityInformationList: [CityInformation])
+    func cityInformationUpdated(cityInformationList: [CityInformation])
+    func locationUpdated(location: CLLocation)
 }

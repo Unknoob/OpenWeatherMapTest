@@ -12,7 +12,6 @@ import RxSwift
 import RxCocoa
 
 class ListViewController: UIViewController, ListViewControllerProtocol {
-
     @IBOutlet weak var tableView: UITableView!
     
     var presenter: ListPresenterProtocol!
@@ -43,10 +42,14 @@ class ListViewController: UIViewController, ListViewControllerProtocol {
         
     }
 
-    func updateCityInformation(cityInformationList: [CityInformation]) {
+    func cityInformationUpdated(cityInformationList: [CityInformation]) {
         self.cityInformationList.value = cityInformationList.sorted(by: { lhs, rhs -> Bool in
             return self.currentLocation.value.distance(from: CLLocation(latitude: lhs.coordinates.latitude, longitude: lhs.coordinates.longitude)) < self.currentLocation.value.distance(from: CLLocation(latitude: rhs.coordinates.latitude, longitude: rhs.coordinates.longitude))
         })
+    }
+    
+    func locationUpdated(location: CLLocation) {
+        self.currentLocation.value = location
     }
     
     override func didReceiveMemoryWarning() {

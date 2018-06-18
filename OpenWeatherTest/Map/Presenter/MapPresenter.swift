@@ -6,12 +6,18 @@
 //  Copyright © 2018 Gabriel Beltrame Silva. All rights reserved.
 //
 
+import CoreLocation
+
 class MapPresenter: MapPresenterProtocol {
     weak var viewController: MapViewControllerProtocol!
     var interactor: MapInteractorProtocol!
     var router: MapRouterProtocol!
     
     func cityInformationUpdated(cityInformation: [CityInformation]) {
-        viewController.updateCityInformation(cityInformationList: cityInformation)
+        viewController.cityInformationUpdated(cityInformationList: cityInformation)
+    }
+    
+    func locationUpdated(location: CLLocation) {
+        viewController.locationUpdated(location: location)
     }
 }

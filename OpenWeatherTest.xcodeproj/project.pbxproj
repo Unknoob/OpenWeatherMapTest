@@ -46,6 +46,8 @@
 		A761B95120D54D1000F81F86 /* CloudInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B95020D54D1000F81F86 /* CloudInformation.swift */; };
 		A761B95320D5984700F81F86 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B95220D5984700F81F86 /* ListTableViewCell.swift */; };
 		A761B95520D5A9EB00F81F86 /* UnitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B95420D5A9EB00F81F86 /* UnitHelper.swift */; };
+		A761B95820D74E6400F81F86 /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B95720D74E6400F81F86 /* MapAnnotation.swift */; };
+		A761B95A20D74F0F00F81F86 /* MapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B95920D74F0F00F81F86 /* MapAnnotationView.swift */; };
 		A7A16A2020D1DAFD003E1830 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A1F20D1DAFD003E1830 /* AppDelegate.swift */; };
 		A7A16A2220D1DAFD003E1830 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A2120D1DAFD003E1830 /* ListViewController.swift */; };
 		A7A16A2420D1DAFD003E1830 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A2320D1DAFD003E1830 /* MapViewController.swift */; };
@@ -118,6 +120,8 @@
 		A761B95020D54D1000F81F86 /* CloudInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudInformation.swift; sourceTree = "<group>"; };
 		A761B95220D5984700F81F86 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		A761B95420D5A9EB00F81F86 /* UnitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitHelper.swift; sourceTree = "<group>"; };
+		A761B95720D74E6400F81F86 /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
+		A761B95920D74F0F00F81F86 /* MapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationView.swift; sourceTree = "<group>"; };
 		A7A16A1C20D1DAFD003E1830 /* OpenWeatherTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeatherTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A16A1F20D1DAFD003E1830 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7A16A2120D1DAFD003E1830 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -230,6 +234,7 @@
 		A7190B3920D1F2CA003D62A5 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				A761B95620D74E5700F81F86 /* Model */,
 				A7190B3A20D1F2CE003D62A5 /* Interactor */,
 				A7190B3B20D1F2D3003D62A5 /* Presenter */,
 				A761B93020D495EE00F81F86 /* Router */,
@@ -261,6 +266,7 @@
 			children = (
 				A7A16A2320D1DAFD003E1830 /* MapViewController.swift */,
 				A761B93D20D49AF500F81F86 /* MapViewControllerProtocol.swift */,
+				A761B95920D74F0F00F81F86 /* MapAnnotationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -380,6 +386,14 @@
 				A761B94C20D4AE2500F81F86 /* Weather.swift */,
 				A761B94420D4A7BA00F81F86 /* WeatherList.swift */,
 				A761B94A20D4ABEF00F81F86 /* Wind.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A761B95620D74E5700F81F86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A761B95720D74E6400F81F86 /* MapAnnotation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -693,6 +707,7 @@
 				A7190B4020D46F00003D62A5 /* NetworkManager.swift in Sources */,
 				A761B93620D4993E00F81F86 /* MapPresenter.swift in Sources */,
 				A761B94B20D4ABEF00F81F86 /* Wind.swift in Sources */,
+				A761B95820D74E6400F81F86 /* MapAnnotation.swift in Sources */,
 				A761B90B20D48BA800F81F86 /* ListPresenterProtocol.swift in Sources */,
 				A761B93420D4993500F81F86 /* MapRouterProtocol.swift in Sources */,
 				A761B94F20D54C1C00F81F86 /* MainInformation.swift in Sources */,
@@ -702,6 +717,7 @@
 				A7A16A2420D1DAFD003E1830 /* MapViewController.swift in Sources */,
 				A7190B5320D480F7003D62A5 /* ListRouterProtocol.swift in Sources */,
 				A7A16A2020D1DAFD003E1830 /* AppDelegate.swift in Sources */,
+				A761B95A20D74F0F00F81F86 /* MapAnnotationView.swift in Sources */,
 				A761B94520D4A7BA00F81F86 /* WeatherList.swift in Sources */,
 				A7190B5020D4804D003D62A5 /* RootRouterProtocol.swift in Sources */,
 				A761B90920D48B9100F81F86 /* ListPresenter.swift in Sources */,

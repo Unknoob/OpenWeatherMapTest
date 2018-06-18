@@ -8,12 +8,13 @@
 
 import RxSwift
 import RxCocoa
+import CoreLocation
 
 protocol ContainerPresenterProtocol: class {
     var viewController: ContainerViewControllerProtocol! { get set }
     var interactor: ContainerInteractorProtocol! { get set }
     var router: ContainerRouterProtocol! { get set }
     
-    func coordinatesUpdated(coordinates: Coordinates)
+    func locationUpdated(location: CLLocation)
     func cityInformationUpdated(cityInformation: [CityInformation])
 }

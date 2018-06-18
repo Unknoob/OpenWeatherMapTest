@@ -33,11 +33,13 @@ class ContainerViewController: UIViewController, ContainerViewControllerProtocol
     
         selectedUnit.asObservable().subscribe({ (temperature) in
             self.listViewController.selectedUnit.value = temperature.element!
+            self.mapViewController.selectedUnit.value = temperature.element!
         }).disposed(by: disposeBag)
         
-        currentLocation.asObservable().subscribe({ (currentLocation) in
-            self.listViewController.currentLocation.value = currentLocation.element!
-        }).disposed(by: disposeBag)
+    }
+    
+    func locationUpdated(location: CLLocation) {
+        self.currentLocation.value = location
     }
     
     override func didReceiveMemoryWarning() {
