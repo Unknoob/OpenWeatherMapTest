@@ -40,7 +40,7 @@
                                                     <action selector="toggleListingType:" destination="3Im-1U-d5v" id="H9i-2z-FF9"/>
                                                 </connections>
                                             </barButtonItem>
-                                            <barButtonItem title="F" id="UVQ-EY-kuv">
+                                            <barButtonItem title="Fº" id="UVQ-EY-kuv">
                                                 <connections>
                                                     <action selector="toggleTemperatureUnit:" destination="3Im-1U-d5v" id="hMK-hY-Tea"/>
                                                 </connections>
@@ -99,7 +99,7 @@
                                                         <constraint firstAttribute="width" constant="50" id="lFM-k3-LWI"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCc-d4-BjT">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCc-d4-BjT">
                                                     <rect key="frame" x="15" y="11" width="42" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
@@ -132,12 +132,19 @@ MzAPwrpDA
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMT-5X-XsL">
+                                                    <rect key="frame" x="15" y="48" width="71" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ueZ-b5-dVn" firstAttribute="leading" secondItem="g8B-od-RP2" secondAttribute="leadingMargin" id="0B6-Oe-bES"/>
                                                 <constraint firstItem="7tJ-6t-bxV" firstAttribute="leading" secondItem="ueZ-b5-dVn" secondAttribute="trailing" constant="10" id="38H-iL-NOo"/>
                                                 <constraint firstItem="iTb-CX-7j4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7tJ-6t-bxV" secondAttribute="trailing" constant="10" id="4rx-Wb-tdq"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="ueZ-b5-dVn" secondAttribute="bottom" id="DGV-O3-hIz"/>
+                                                <constraint firstItem="iMT-5X-XsL" firstAttribute="leading" secondItem="g8B-od-RP2" secondAttribute="leadingMargin" id="IYT-5N-9de"/>
                                                 <constraint firstItem="lAn-lk-S5H" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aCc-d4-BjT" secondAttribute="trailing" constant="10" id="NCn-cF-shC"/>
                                                 <constraint firstItem="aCc-d4-BjT" firstAttribute="top" secondItem="g8B-od-RP2" secondAttribute="topMargin" id="Rac-Nf-PKq"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="iTb-CX-7j4" secondAttribute="bottom" id="S9b-8C-khZ"/>
@@ -146,11 +153,13 @@ MzAPwrpDA
                                                 <constraint firstItem="aCc-d4-BjT" firstAttribute="leading" secondItem="g8B-od-RP2" secondAttribute="leadingMargin" id="gMc-r3-8vH"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="lAn-lk-S5H" secondAttribute="trailing" constant="4" id="pC8-oN-V5r"/>
                                                 <constraint firstItem="lAn-lk-S5H" firstAttribute="baseline" secondItem="aCc-d4-BjT" secondAttribute="baseline" id="umH-Ej-Rok"/>
+                                                <constraint firstItem="iMT-5X-XsL" firstAttribute="top" secondItem="aCc-d4-BjT" secondAttribute="bottom" constant="8" id="z6G-YO-KkS"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cityLabel" destination="aCc-d4-BjT" id="Bpa-8W-smO"/>
                                             <outlet property="currentTemperatureLabel" destination="lAn-lk-S5H" id="VL7-ht-LkI"/>
+                                            <outlet property="distanceLabel" destination="iMT-5X-XsL" id="M6N-Xp-aab"/>
                                             <outlet property="maximumTemperatureLabel" destination="7tJ-6t-bxV" id="Lln-E6-dOh"/>
                                             <outlet property="minimumTemperatureLabel" destination="ueZ-b5-dVn" id="J7L-bt-gJH"/>
                                             <outlet property="weatherImageView" destination="iTb-CX-7j4" id="UIB-G2-hbi"/>

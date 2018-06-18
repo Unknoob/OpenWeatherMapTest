@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 import RxSwift
 import RxCocoa
 
@@ -17,6 +18,7 @@ class ListViewController: UIViewController, ListViewControllerProtocol {
     var presenter: ListPresenterProtocol!
     var cityInformationList: Variable<[CityInformation]> = Variable([])
     var selectedUnit: Variable<TemperatureUnit> = Variable(.celsius)
+    var currentLocation:  Variable<CLLocation> = Variable(CLLocation())
     var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -27,13 +29,24 @@ class ListViewController: UIViewController, ListViewControllerProtocol {
             self.selectedUnit.asObservable().subscribe({ (temperature) in
                 cell.selectedUnit.value = temperature.element!
             }).disposed(by: cell.disposeBag)
+            self.currentLocation.asObservable().subscribe({ currentLocation in
+                cell.currentLocation.value = currentLocation.element!
+            }).disposed(by: cell.disposeBag)
             
         }.disposed(by: disposeBag)
+        
+        currentLocation.asObservable().subscribe({ ObserverType in
+            self.cityInformationList.value = self.cityInformationList.value.sorted(by: { lhs, rhs -> Bool in
+                return self.currentLocation.value.distance(from: CLLocation(latitude: lhs.coordinates.latitude, longitude: lhs.coordinates.longitude)) < self.currentLocation.value.distance(from: CLLocation(latitude: rhs.coordinates.latitude, longitude: rhs.coordinates.longitude))
+            })
+        }).disposed(by: disposeBag)
         
     }
 
     func updateCityInformation(cityInformationList: [CityInformation]) {
-        self.cityInformationList.value = cityInformationList
+        self.cityInformationList.value = cityInformationList.sorted(by: { lhs, rhs -> Bool in
+            return self.currentLocation.value.distance(from: CLLocation(latitude: lhs.coordinates.latitude, longitude: lhs.coordinates.longitude)) < self.currentLocation.value.distance(from: CLLocation(latitude: rhs.coordinates.latitude, longitude: rhs.coordinates.longitude))
+        })
     }
     
     override func didReceiveMemoryWarning() {

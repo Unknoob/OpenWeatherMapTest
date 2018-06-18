@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 import RxSwift
 import RxCocoa
 
@@ -22,6 +23,7 @@ class ContainerViewController: UIViewController, ContainerViewControllerProtocol
     var presenter: ContainerPresenterProtocol!
     var activeView: ViewType = .list
     var selectedUnit: Variable<TemperatureUnit> = Variable(.celsius)
+    var currentLocation:  Variable<CLLocation> = Variable(CLLocation())
     var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -31,6 +33,10 @@ class ContainerViewController: UIViewController, ContainerViewControllerProtocol
     
         selectedUnit.asObservable().subscribe({ (temperature) in
             self.listViewController.selectedUnit.value = temperature.element!
+        }).disposed(by: disposeBag)
+        
+        currentLocation.asObservable().subscribe({ (currentLocation) in
+            self.listViewController.currentLocation.value = currentLocation.element!
         }).disposed(by: disposeBag)
     }
     
@@ -76,10 +82,10 @@ class ContainerViewController: UIViewController, ContainerViewControllerProtocol
     @IBAction func toggleTemperatureUnit(_ sender: Any) {
         switch selectedUnit.value {
         case .celsius:
-            unitToggleButton.title = "C"
+            unitToggleButton.title = "Cº"
             self.selectedUnit.value = .fahrenheit
         case .fahrenheit:
-            unitToggleButton.title = "F"
+            unitToggleButton.title = "Fº"
 
             
             self.selectedUnit.value = .celsius

@@ -10,7 +10,7 @@ import Foundation
 
 /// An enum containing the possible results of a request.
 /// - failure: Returns an Error.
-/// - success: Returns a value specified on implementation.
+/// - success: Returns a Value specified on implementation.
 public enum Result<Value> {
     /// - failure: Returns an NSError.
     case failure(Error)
@@ -28,7 +28,12 @@ public enum TemperatureUnit {
     case fahrenheit
 }
 
+public enum DistanceUnit {
+    case metric
+    case imperial
+}
+
 /// A normal Dictionary
 public typealias JSONDictionary = [String: Any]
-/// An aray of dictionaries
+/// An array of dictionaries
 public typealias JSONArray = [JSONDictionary]
