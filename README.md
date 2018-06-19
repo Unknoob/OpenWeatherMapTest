@@ -31,12 +31,17 @@ Which Pods I used and why :
 
  - Move the Models to the presenter because I think it makes more sense that way.
  - Do the Model > View binding on the presenter.
- - Force Touch on the List View Controller to show more information.
+ - ~~Force Touch on the List View Controller to show more information.~~
+ - Allow filtering locations from the list.
+ - Allow reordering the list.
  - Prettier UX.
+ - Add cool icons.
  - Separate the API calls in another class.
  - Better error handling.
  - Loading indicators.
  - Code comments.
  - Unit tests.
  - UI tests.
+ - Localization.
+ - ~~Limit the API requests to only update information after a considerable distance has been walked.~~
  - ~~Learn how to format a README file.~~

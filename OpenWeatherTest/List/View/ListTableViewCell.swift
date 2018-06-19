@@ -25,7 +25,7 @@ class ListTableViewCell: UITableViewCell {
     var currentLocation: Variable<CLLocation> = Variable(CLLocation())
     var disposeBag = DisposeBag()
     
-    private var cityInformation: CityInformation!
+    var cityInformation: CityInformation!
     
     func fill(withCityInformation cityInformation: CityInformation, andUnit temperatureUnit: TemperatureUnit) {
         self.cityInformation = cityInformation

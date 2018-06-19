@@ -11,7 +11,8 @@ import CoreLocation
 import RxSwift
 import RxCocoa
 
-class ListViewController: UIViewController, ListViewControllerProtocol {
+class ListViewController: UIViewController, ListViewControllerProtocol, UIViewControllerPreviewingDelegate {
+    
     @IBOutlet weak var tableView: UITableView!
     
     var presenter: ListPresenterProtocol!
@@ -22,6 +23,8 @@ class ListViewController: UIViewController, ListViewControllerProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        registerForPreviewing(with: self, sourceView: tableView)
         
         cityInformationList.asObservable().bind(to: tableView.rx.items(cellIdentifier: "ListTableViewCell", cellType: ListTableViewCell.self)) { (_, cityInformation: CityInformation, cell: ListTableViewCell) in
             cell.fill(withCityInformation: cityInformation, andUnit: self.selectedUnit.value)
@@ -52,9 +55,17 @@ class ListViewController: UIViewController, ListViewControllerProtocol {
         self.currentLocation.value = location
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        if let indexPath = tableView.indexPathForRow(at: location), let cell = tableView.cellForRow(at: indexPath) as? ListTableViewCell {
+            previewingContext.sourceRect = tableView.rectForRow(at: indexPath)
+            return presenter.router.prepareForceTouchPreview(cityInformation: cell.cityInformation, currentLocation: currentLocation.value, selectedUnit: selectedUnit.value)
+        }
+        return nil
     }
-
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        
+    }
+    
 }
 

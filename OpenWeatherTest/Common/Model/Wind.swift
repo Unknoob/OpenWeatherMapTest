@@ -9,11 +9,9 @@
 struct Wind: Codable {
     let speed: Double
     let degrees: Int
-    let gust: Int
     
     enum CodingKeys: String, CodingKey {
         case speed
         case degrees = "deg"
-        case gust
     }
 }

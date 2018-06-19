@@ -46,6 +46,10 @@
 		A761B95F20D887D500F81F86 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B95E20D887D500F81F86 /* NetworkError.swift */; };
 		A761B96220D88E4700F81F86 /* Error+Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B96120D88E4700F81F86 /* Error+Code.swift */; };
 		A761B96420D899B800F81F86 /* KingfisherHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B96320D899B800F81F86 /* KingfisherHelper.swift */; };
+		A761B96920D8A60500F81F86 /* PreviewViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B96820D8A60500F81F86 /* PreviewViewControllerProtocol.swift */; };
+		A761B96B20D8A64D00F81F86 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B96A20D8A64D00F81F86 /* PreviewViewController.swift */; };
+		A761B96D20D8AC3D00F81F86 /* PreviewRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B96C20D8AC3D00F81F86 /* PreviewRouterProtocol.swift */; };
+		A761B96F20D8AC6100F81F86 /* PreviewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B96E20D8AC6100F81F86 /* PreviewRouter.swift */; };
 		A7A16A2020D1DAFD003E1830 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A1F20D1DAFD003E1830 /* AppDelegate.swift */; };
 		A7A16A2220D1DAFD003E1830 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A2120D1DAFD003E1830 /* ListViewController.swift */; };
 		A7A16A2420D1DAFD003E1830 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A2320D1DAFD003E1830 /* MapViewController.swift */; };
@@ -118,6 +122,10 @@
 		A761B95E20D887D500F81F86 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		A761B96120D88E4700F81F86 /* Error+Code.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Code.swift"; sourceTree = "<group>"; };
 		A761B96320D899B800F81F86 /* KingfisherHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherHelper.swift; sourceTree = "<group>"; };
+		A761B96820D8A60500F81F86 /* PreviewViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewControllerProtocol.swift; sourceTree = "<group>"; };
+		A761B96A20D8A64D00F81F86 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		A761B96C20D8AC3D00F81F86 /* PreviewRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewRouterProtocol.swift; sourceTree = "<group>"; };
+		A761B96E20D8AC6100F81F86 /* PreviewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewRouter.swift; sourceTree = "<group>"; };
 		A7A16A1C20D1DAFD003E1830 /* OpenWeatherTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeatherTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A16A1F20D1DAFD003E1830 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7A16A2120D1DAFD003E1830 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -384,6 +392,33 @@
 			path = Error;
 			sourceTree = "<group>";
 		};
+		A761B96520D8A5D100F81F86 /* PreviewViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A761B96720D8A5E700F81F86 /* View */,
+				A761B96620D8A5E200F81F86 /* Router */,
+			);
+			path = PreviewViewController;
+			sourceTree = "<group>";
+		};
+		A761B96620D8A5E200F81F86 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A761B96C20D8AC3D00F81F86 /* PreviewRouterProtocol.swift */,
+				A761B96E20D8AC6100F81F86 /* PreviewRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A761B96720D8A5E700F81F86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A761B96820D8A60500F81F86 /* PreviewViewControllerProtocol.swift */,
+				A761B96A20D8A64D00F81F86 /* PreviewViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A7A16A1320D1DAFD003E1830 = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +444,7 @@
 		A7A16A1E20D1DAFD003E1830 /* OpenWeatherTest */ = {
 			isa = PBXGroup;
 			children = (
+				A761B96520D8A5D100F81F86 /* PreviewViewController */,
 				A7190B3D20D1F2E6003D62A5 /* Application */,
 				A7190B3E20D46ED1003D62A5 /* Common */,
 				A761B90220D4881F00F81F86 /* Container */,
@@ -685,6 +721,8 @@
 				A761B95320D5984700F81F86 /* ListTableViewCell.swift in Sources */,
 				A761B93E20D49AF500F81F86 /* MapViewControllerProtocol.swift in Sources */,
 				A7190B4220D46F5F003D62A5 /* Constants.swift in Sources */,
+				A761B96920D8A60500F81F86 /* PreviewViewControllerProtocol.swift in Sources */,
+				A761B96D20D8AC3D00F81F86 /* PreviewRouterProtocol.swift in Sources */,
 				A761B93820D4994D00F81F86 /* MapPresenterProtocol.swift in Sources */,
 				A761B92620D4939D00F81F86 /* ContainerRouterProtocol.swift in Sources */,
 				A7190B4020D46F00003D62A5 /* NetworkManager.swift in Sources */,
@@ -695,6 +733,7 @@
 				A761B95820D74E6400F81F86 /* MapAnnotation.swift in Sources */,
 				A761B90B20D48BA800F81F86 /* ListPresenterProtocol.swift in Sources */,
 				A761B93420D4993500F81F86 /* MapRouterProtocol.swift in Sources */,
+				A761B96B20D8A64D00F81F86 /* PreviewViewController.swift in Sources */,
 				A761B94F20D54C1C00F81F86 /* MainInformation.swift in Sources */,
 				A7190B5520D48104003D62A5 /* ListRouter.swift in Sources */,
 				A761B92B20D493D000F81F86 /* ContainerViewControllerProtocol.swift in Sources */,
@@ -705,6 +744,7 @@
 				A761B94520D4A7BA00F81F86 /* WeatherList.swift in Sources */,
 				A7190B5020D4804D003D62A5 /* RootRouterProtocol.swift in Sources */,
 				A761B90920D48B9100F81F86 /* ListPresenter.swift in Sources */,
+				A761B96F20D8AC6100F81F86 /* PreviewRouter.swift in Sources */,
 				A761B91D20D48E1000F81F86 /* ListViewControllerProtocol.swift in Sources */,
 				A761B96420D899B800F81F86 /* KingfisherHelper.swift in Sources */,
 				A761B92D20D494AA00F81F86 /* ContainerInteractor.swift in Sources */,

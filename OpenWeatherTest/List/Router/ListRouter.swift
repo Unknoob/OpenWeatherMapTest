@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ListRouter: ListRouterProtocol {
     weak var viewController: ListViewController?
@@ -25,5 +26,9 @@ class ListRouter: ListRouterProtocol {
         presenter.router = router
         
         return listViewController
+    }
+
+    func prepareForceTouchPreview(cityInformation: CityInformation, currentLocation: CLLocation, selectedUnit: TemperatureUnit) -> PreviewViewController {
+        return PreviewRouter.build(cityInformation: cityInformation, currentLocation: currentLocation, selectedUnit: selectedUnit)
     }
 }

@@ -67,8 +67,5 @@ class ContainerRouter: ContainerRouterProtocol {
         alertController.addAction(settingsOption)
         
         viewController?.present(alertController, animated: true, completion: nil)
-        
-        
-        
     }
 }

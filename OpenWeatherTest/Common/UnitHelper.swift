@@ -42,4 +42,11 @@ class UnitHelper {
             return metersToMiles(distance)
         }
     }
+    
+    static func formatDate(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm, dd/MM/yyyy"
+        return dateFormatter.string(from: date)
+    }
+    
 }
