@@ -52,4 +52,23 @@ class ContainerRouter: ContainerRouterProtocol {
         
         viewController?.present(alertController, animated: true, completion: nil)
     }
+    
+    func showErrorAndSendToSettings() {
+        let alertController = UIAlertController(title: "Location Error", message: "If you don't allow us to see your location we can't display the weather. :(", preferredStyle: .alert)
+        
+        let dismissOption = UIAlertAction(title: "Ignore", style: .default)
+        alertController.addAction(dismissOption)
+        
+        let settingsOption = UIAlertAction(title: "Go to location settings", style: .default) { _ in
+            guard let settingsURL = URL(string: UIApplicationOpenSettingsURLString) else { return }
+            UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
+        }
+        
+        alertController.addAction(settingsOption)
+        
+        viewController?.present(alertController, animated: true, completion: nil)
+        
+        
+        
+    }
 }

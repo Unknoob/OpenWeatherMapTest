@@ -19,4 +19,8 @@ class ContainerPresenter: ContainerPresenterProtocol {
     func showErrorMessage(error: GenericError, okBlock: @escaping () -> (), retryBlock: @escaping () -> ()) {
         router.showErrorMessage(error: error, okBlock: okBlock, retryBlock: retryBlock)
     }
+    
+    func showErrorAndSendToSettings() {
+        router.showErrorAndSendToSettings()
+    }
 }

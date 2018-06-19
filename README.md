@@ -6,6 +6,10 @@ I should start by saying that I used this test to learn a bunch of new technolog
 If you're going to judge me on the work I did in 5 days, use the `1.0` Tag
 If you want to see the cooler stuff check out the development branch.
 
+## Project details:
+ - XCode 9.4.1.
+ - iOS 11 or higher.
+
 ## Architecture: Why Viper?
 I didn't want to end with Massive View Controllers so I thought I'd give it a try. I'm sure I could separate the responsibilities better and I'll keep working on it.
 
@@ -27,8 +31,12 @@ Which Pods I used and why :
 
  - Move the Models to the presenter because I think it makes more sense that way.
  - Do the Model > View binding on the presenter.
- - Force Touch on the List View Controller.
+ - Force Touch on the List View Controller to show more information.
  - Prettier UX.
  - Separate the API calls in another class.
  - Better error handling.
+ - Loading indicators.
+ - Code comments.
+ - Unit tests.
+ - UI tests.
  - ~~Learn how to format a README file.~~

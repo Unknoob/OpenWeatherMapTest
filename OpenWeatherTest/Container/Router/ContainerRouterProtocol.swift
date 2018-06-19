@@ -10,5 +10,6 @@ protocol ContainerRouterProtocol: class {
     var viewController: ContainerViewController? { get set }
     static func build() -> ContainerViewController
     func showErrorMessage(error: GenericError, okBlock: @escaping () -> (), retryBlock: @escaping () -> ())
+    func showErrorAndSendToSettings()
 }
 

@@ -89,10 +89,9 @@ class ContainerInteractor: NSObject, ContainerInteractorProtocol, CLLocationMana
         }
     }
     
-    // If we have been deined access give the user the option to change it
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if(status == CLAuthorizationStatus.denied) {
-            print("Location Request Refused")
+            containerPresenter?.showErrorAndSendToSettings()
         }
     }
 }
