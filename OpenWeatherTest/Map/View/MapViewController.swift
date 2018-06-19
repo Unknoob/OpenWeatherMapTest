@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 import RxSwift
 import RxCocoa
+import Kingfisher
 
 class MapViewController: UIViewController, MapViewControllerProtocol, MKMapViewDelegate {
     
@@ -24,6 +25,7 @@ class MapViewController: UIViewController, MapViewControllerProtocol, MKMapViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.showsUserLocation = true
+        mapView.delegate = self
         
         self.currentLocation.asObservable().subscribe({ (currentLocation) in
             let coordinateRegion = MKCoordinateRegionMakeWithDistance(currentLocation.element!.coordinate, 50000, 50000)
@@ -38,7 +40,7 @@ class MapViewController: UIViewController, MapViewControllerProtocol, MKMapViewD
     
     func cityInformationUpdated(cityInformationList: [CityInformation]) {
         self.cityInformationList.value = cityInformationList
-        
+        mapView.removeAnnotations(mapView.annotations)
         cityInformationList.forEach { cityInformation in
             let annotation = MapAnnotation(title: UnitHelper.temperature(cityInformation.mainInformation.currentTemperature, inUnit: selectedUnit.value), locationName: cityInformation.name, discipline: "TEST", imageName: cityInformation.weatherList.first!.icon, coordinate: CLLocationCoordinate2D(latitude: cityInformation.coordinates.latitude, longitude: cityInformation.coordinates.longitude))
             mapView.addAnnotation(annotation)
@@ -50,23 +52,23 @@ class MapViewController: UIViewController, MapViewControllerProtocol, MKMapViewD
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        // 2
         guard let annotation = annotation as? MapAnnotation else { return nil }
-        // 3
-        let identifier = "marker"
+        let identifier = MKMapViewDefaultAnnotationViewReuseIdentifier
         var view: MKMarkerAnnotationView
-        // 4
-        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-            as? MKMarkerAnnotationView {
-            dequeuedView.annotation = annotation
-            view = dequeuedView
-        } else {
-            // 5
-            view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            view.canShowCallout = true
-            view.calloutOffset = CGPoint(x: -5, y: 5)
-            view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        
+        view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+        view.canShowCallout = true
+        view.calloutOffset = CGPoint(x: 0, y: 20)
+        let mapsButton = UIButton(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 30, height: 30)))
+        
+        if let imageName = annotation.imageName, let imageURL = URL(string: "https://openweathermap.org/img/w/\(imageName)\(".png")") {
+            KingfisherManager.shared.retrieveImage(with: imageURL, options: nil, progressBlock: nil, completionHandler: { downloadedImage, error, cacheType, imageURL in
+                mapsButton.setBackgroundImage(downloadedImage, for: .normal)
+            })
         }
+        
+        view.rightCalloutAccessoryView = mapsButton
+        
         return view
     }
     

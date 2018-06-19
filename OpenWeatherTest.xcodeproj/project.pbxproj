@@ -18,8 +18,6 @@
 		A761B90520D4884200F81F86 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B90420D4884200F81F86 /* ContainerViewController.swift */; };
 		A761B90920D48B9100F81F86 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B90820D48B9100F81F86 /* ListPresenter.swift */; };
 		A761B90B20D48BA800F81F86 /* ListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B90A20D48BA800F81F86 /* ListPresenterProtocol.swift */; };
-		A761B91320D48C0F00F81F86 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B91220D48C0F00F81F86 /* ListInteractor.swift */; };
-		A761B91520D48C2700F81F86 /* ListInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B91420D48C2600F81F86 /* ListInteractorProtocol.swift */; };
 		A761B91D20D48E1000F81F86 /* ListViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B91C20D48E1000F81F86 /* ListViewControllerProtocol.swift */; };
 		A761B92020D4922E00F81F86 /* ContainerPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B91F20D4922E00F81F86 /* ContainerPresenterProtocol.swift */; };
 		A761B92220D4924000F81F86 /* ContainerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B92120D4924000F81F86 /* ContainerPresenter.swift */; };
@@ -32,8 +30,6 @@
 		A761B93420D4993500F81F86 /* MapRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93320D4993500F81F86 /* MapRouterProtocol.swift */; };
 		A761B93620D4993E00F81F86 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93520D4993E00F81F86 /* MapPresenter.swift */; };
 		A761B93820D4994D00F81F86 /* MapPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93720D4994D00F81F86 /* MapPresenterProtocol.swift */; };
-		A761B93A20D4995F00F81F86 /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93920D4995F00F81F86 /* MapInteractor.swift */; };
-		A761B93C20D4996800F81F86 /* MapInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93B20D4996800F81F86 /* MapInteractorProtocol.swift */; };
 		A761B93E20D49AF500F81F86 /* MapViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93D20D49AF500F81F86 /* MapViewControllerProtocol.swift */; };
 		A761B94120D49F6F00F81F86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A761B93F20D49F6F00F81F86 /* Main.storyboard */; };
 		A761B94220D49F6F00F81F86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A761B94020D49F6F00F81F86 /* LaunchScreen.storyboard */; };
@@ -47,7 +43,6 @@
 		A761B95320D5984700F81F86 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B95220D5984700F81F86 /* ListTableViewCell.swift */; };
 		A761B95520D5A9EB00F81F86 /* UnitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B95420D5A9EB00F81F86 /* UnitHelper.swift */; };
 		A761B95820D74E6400F81F86 /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B95720D74E6400F81F86 /* MapAnnotation.swift */; };
-		A761B95A20D74F0F00F81F86 /* MapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B95920D74F0F00F81F86 /* MapAnnotationView.swift */; };
 		A7A16A2020D1DAFD003E1830 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A1F20D1DAFD003E1830 /* AppDelegate.swift */; };
 		A7A16A2220D1DAFD003E1830 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A2120D1DAFD003E1830 /* ListViewController.swift */; };
 		A7A16A2420D1DAFD003E1830 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A2320D1DAFD003E1830 /* MapViewController.swift */; };
@@ -92,8 +87,6 @@
 		A761B90420D4884200F81F86 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		A761B90820D48B9100F81F86 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		A761B90A20D48BA800F81F86 /* ListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterProtocol.swift; sourceTree = "<group>"; };
-		A761B91220D48C0F00F81F86 /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
-		A761B91420D48C2600F81F86 /* ListInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractorProtocol.swift; sourceTree = "<group>"; };
 		A761B91C20D48E1000F81F86 /* ListViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewControllerProtocol.swift; sourceTree = "<group>"; };
 		A761B91F20D4922E00F81F86 /* ContainerPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerPresenterProtocol.swift; sourceTree = "<group>"; };
 		A761B92120D4924000F81F86 /* ContainerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerPresenter.swift; sourceTree = "<group>"; };
@@ -106,8 +99,6 @@
 		A761B93320D4993500F81F86 /* MapRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouterProtocol.swift; sourceTree = "<group>"; };
 		A761B93520D4993E00F81F86 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
 		A761B93720D4994D00F81F86 /* MapPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenterProtocol.swift; sourceTree = "<group>"; };
-		A761B93920D4995F00F81F86 /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
-		A761B93B20D4996800F81F86 /* MapInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractorProtocol.swift; sourceTree = "<group>"; };
 		A761B93D20D49AF500F81F86 /* MapViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerProtocol.swift; sourceTree = "<group>"; };
 		A761B93F20D49F6F00F81F86 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A761B94020D49F6F00F81F86 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -121,7 +112,6 @@
 		A761B95220D5984700F81F86 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		A761B95420D5A9EB00F81F86 /* UnitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitHelper.swift; sourceTree = "<group>"; };
 		A761B95720D74E6400F81F86 /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
-		A761B95920D74F0F00F81F86 /* MapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationView.swift; sourceTree = "<group>"; };
 		A7A16A1C20D1DAFD003E1830 /* OpenWeatherTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeatherTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A16A1F20D1DAFD003E1830 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7A16A2120D1DAFD003E1830 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -195,7 +185,6 @@
 		A7190B3520D1F2AA003D62A5 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				A7190B3820D1F2C3003D62A5 /* Interactor */,
 				A7190B3720D1F2BC003D62A5 /* Presenter */,
 				A7190B5120D480E9003D62A5 /* Router */,
 				A7190B3620D1F2B4003D62A5 /* View */,
@@ -222,34 +211,15 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		A7190B3820D1F2C3003D62A5 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				A761B91220D48C0F00F81F86 /* ListInteractor.swift */,
-				A761B91420D48C2600F81F86 /* ListInteractorProtocol.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
 		A7190B3920D1F2CA003D62A5 /* Map */ = {
 			isa = PBXGroup;
 			children = (
 				A761B95620D74E5700F81F86 /* Model */,
-				A7190B3A20D1F2CE003D62A5 /* Interactor */,
 				A7190B3B20D1F2D3003D62A5 /* Presenter */,
 				A761B93020D495EE00F81F86 /* Router */,
 				A7190B3C20D1F2D7003D62A5 /* View */,
 			);
 			path = Map;
-			sourceTree = "<group>";
-		};
-		A7190B3A20D1F2CE003D62A5 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				A761B93920D4995F00F81F86 /* MapInteractor.swift */,
-				A761B93B20D4996800F81F86 /* MapInteractorProtocol.swift */,
-			);
-			path = Interactor;
 			sourceTree = "<group>";
 		};
 		A7190B3B20D1F2D3003D62A5 /* Presenter */ = {
@@ -266,7 +236,6 @@
 			children = (
 				A7A16A2320D1DAFD003E1830 /* MapViewController.swift */,
 				A761B93D20D49AF500F81F86 /* MapViewControllerProtocol.swift */,
-				A761B95920D74F0F00F81F86 /* MapAnnotationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -688,10 +657,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A761B95120D54D1000F81F86 /* CloudInformation.swift in Sources */,
-				A761B91520D48C2700F81F86 /* ListInteractorProtocol.swift in Sources */,
-				A761B91320D48C0F00F81F86 /* ListInteractor.swift in Sources */,
 				A761B93220D4992D00F81F86 /* MapRouter.swift in Sources */,
-				A761B93C20D4996800F81F86 /* MapInteractorProtocol.swift in Sources */,
 				A761B95520D5A9EB00F81F86 /* UnitHelper.swift in Sources */,
 				A761B94D20D4AE2500F81F86 /* Weather.swift in Sources */,
 				A761B92820D493A800F81F86 /* ContainerRouter.swift in Sources */,
@@ -717,7 +683,6 @@
 				A7A16A2420D1DAFD003E1830 /* MapViewController.swift in Sources */,
 				A7190B5320D480F7003D62A5 /* ListRouterProtocol.swift in Sources */,
 				A7A16A2020D1DAFD003E1830 /* AppDelegate.swift in Sources */,
-				A761B95A20D74F0F00F81F86 /* MapAnnotationView.swift in Sources */,
 				A761B94520D4A7BA00F81F86 /* WeatherList.swift in Sources */,
 				A7190B5020D4804D003D62A5 /* RootRouterProtocol.swift in Sources */,
 				A761B90920D48B9100F81F86 /* ListPresenter.swift in Sources */,
@@ -726,7 +691,6 @@
 				A761B94720D4A84300F81F86 /* CityInformation.swift in Sources */,
 				A761B90520D4884200F81F86 /* ContainerViewController.swift in Sources */,
 				A7A16A2220D1DAFD003E1830 /* ListViewController.swift in Sources */,
-				A761B93A20D4995F00F81F86 /* MapInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,14 +23,15 @@ class ContainerRouter: ContainerRouterProtocol {
         
         router.viewController = containerViewController
         
-        interactor.presenter = presenter
+        interactor.containerPresenter = presenter
+        interactor.listPresenter = containerViewController.listViewController.presenter
+        interactor.mapPresenter = containerViewController.mapViewController.presenter
+        
         containerViewController.presenter = presenter
         
         presenter.viewController = containerViewController
         presenter.interactor = interactor
         presenter.router = router
-        presenter.listPresenter = containerViewController.listViewController.presenter
-        presenter.mapPresenter = containerViewController.mapViewController.presenter
         
         return containerViewController
     }

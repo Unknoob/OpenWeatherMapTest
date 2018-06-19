@@ -10,7 +10,6 @@ import CoreLocation
 
 protocol MapPresenterProtocol: class {
     var viewController: MapViewControllerProtocol! { get set }
-    var interactor: MapInteractorProtocol! { get set }
     var router: MapRouterProtocol! { get set }
     
     func cityInformationUpdated(cityInformation: [CityInformation])

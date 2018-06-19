@@ -7,7 +7,9 @@
 //
 
 protocol ContainerInteractorProtocol: class {
-    var presenter: ContainerPresenterProtocol? { get set }
+    var containerPresenter: ContainerPresenterProtocol? { get set }
+    var listPresenter: ListPresenterProtocol? { get set }
+    var mapPresenter: MapPresenterProtocol? { get set }
     
     func requestPermission()
 }

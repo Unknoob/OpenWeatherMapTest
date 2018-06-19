@@ -15,6 +15,4 @@ protocol ContainerPresenterProtocol: class {
     var interactor: ContainerInteractorProtocol! { get set }
     var router: ContainerRouterProtocol! { get set }
     
-    func locationUpdated(location: CLLocation)
-    func cityInformationUpdated(cityInformation: [CityInformation])
 }

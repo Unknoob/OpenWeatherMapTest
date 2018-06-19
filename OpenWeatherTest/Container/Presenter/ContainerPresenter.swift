@@ -15,19 +15,6 @@ class ContainerPresenter: ContainerPresenterProtocol {
     var interactor: ContainerInteractorProtocol!
     var router: ContainerRouterProtocol!
     var dispose = DisposeBag()
-    
-    weak var listPresenter: ListPresenterProtocol?
-    weak var mapPresenter: MapPresenterProtocol?
-    
-    func locationUpdated(location: CLLocation) {
-        self.viewController.locationUpdated(location: location)
-        listPresenter?.locationUpdated(location: location)
-        mapPresenter?.locationUpdated(location: location)
-    }
-    
-    func cityInformationUpdated(cityInformation: [CityInformation]) {
-        listPresenter?.cityInformationUpdated(cityInformation: cityInformation)
-        mapPresenter?.cityInformationUpdated(cityInformation: cityInformation)
-    }
+
     
 }

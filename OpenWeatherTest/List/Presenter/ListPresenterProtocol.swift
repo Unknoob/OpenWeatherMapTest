@@ -10,7 +10,6 @@ import CoreLocation
 
 protocol ListPresenterProtocol: class {
     var viewController: ListViewControllerProtocol! { get set }
-    var interactor: ListInteractorProtocol! { get set }
     var router: ListRouterProtocol! { get set }
     
     func cityInformationUpdated(cityInformation: [CityInformation])

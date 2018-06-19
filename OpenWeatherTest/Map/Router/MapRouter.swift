@@ -15,16 +15,13 @@ class MapRouter: MapRouterProtocol {
         let mapViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
         
         let presenter = MapPresenter()
-        let interactor = MapInteractor()
         let router = MapRouter()
         
         router.viewController = mapViewController
         
-        interactor.presenter = presenter
         mapViewController.presenter = presenter
         
         presenter.viewController = mapViewController
-        presenter.interactor = interactor
         presenter.router = router
         
         return mapViewController

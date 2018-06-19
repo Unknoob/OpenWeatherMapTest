@@ -15,16 +15,13 @@ class ListRouter: ListRouterProtocol {
         let listViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ListViewController") as! ListViewController
         
         let presenter = ListPresenter()
-        let interactor = ListInteractor()
         let router = ListRouter()
         
         router.viewController = listViewController
         
-        interactor.presenter = presenter
         listViewController.presenter = presenter
         
         presenter.viewController = listViewController
-        presenter.interactor = interactor
         presenter.router = router
         
         return listViewController

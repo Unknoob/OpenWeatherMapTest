@@ -11,9 +11,9 @@ import RxSwift
 import RxCocoa
 
 class ContainerInteractor: NSObject, ContainerInteractorProtocol, CLLocationManagerDelegate {
-    weak var presenter: ContainerPresenterProtocol?
-    weak var listDelegate: ListInteractor?
-    weak var mapDelegate: MapInteractor?
+    weak var containerPresenter: ContainerPresenterProtocol?
+    weak var listPresenter: ListPresenterProtocol?
+    weak var mapPresenter: MapPresenterProtocol?
     
     let locationManager = CLLocationManager()
     let dispose = DisposeBag()
@@ -45,23 +45,6 @@ class ContainerInteractor: NSObject, ContainerInteractorProtocol, CLLocationMana
         }
     }
     
-    //    func setupTimer() {
-    //        self.timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(self.getWeatherInformation), userInfo: nil, repeats: true)
-    //
-    //    }
-    
-    //    var shouldUpdateWeatherInfo: Bool {
-    //        guard let currentLocation = currentLocation else {
-    //            return false
-    //        }
-    //
-    //        guard let lastLocationFetched = lastLocationFetched else {
-    //            return true
-    //        }
-    //
-    //        return lastLocationFetched.distance(from: currentLocation) > 10.0
-    //    }
-    
     func getWeatherInformation() {
         if !isFetching {
             isFetching = true
@@ -78,7 +61,8 @@ class ContainerInteractor: NSObject, ContainerInteractorProtocol, CLLocationMana
                     self.lastLocationFetched = currentLocation
                     do {
                         let weatherInfo: WeatherList = try JSONDecoder().decode(WeatherList.self, from: jsonData)
-                        self.presenter?.cityInformationUpdated(cityInformation: weatherInfo.citiesList)
+                        self.listPresenter?.cityInformationUpdated(cityInformation: weatherInfo.citiesList)
+                        self.mapPresenter?.cityInformationUpdated(cityInformation: weatherInfo.citiesList)
                         self.isFetching = false
                     } catch {
                         print("Decoding Error: \(error)")
@@ -95,7 +79,8 @@ class ContainerInteractor: NSObject, ContainerInteractorProtocol, CLLocationMana
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let lastLocation = locations.last {
             currentLocation = lastLocation
-            presenter?.locationUpdated(location: lastLocation)
+            listPresenter?.locationUpdated(location: lastLocation)
+            mapPresenter?.locationUpdated(location: lastLocation)
         }
     }
     
