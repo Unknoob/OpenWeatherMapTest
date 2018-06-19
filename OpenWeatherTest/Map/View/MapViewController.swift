@@ -27,11 +27,6 @@ class MapViewController: UIViewController, MapViewControllerProtocol, MKMapViewD
         mapView.showsUserLocation = true
         mapView.delegate = self
         
-        self.currentLocation.asObservable().subscribe({ (currentLocation) in
-            let coordinateRegion = MKCoordinateRegionMakeWithDistance(currentLocation.element!.coordinate, 50000, 50000)
-            self.mapView.setRegion(coordinateRegion, animated: true)
-        }).disposed(by: disposeBag)
-        
         self.selectedUnit.asObservable().subscribe({ (selectedUnit) in
             self.reloadAnnotations()
         }).disposed(by: disposeBag)
@@ -46,6 +41,11 @@ class MapViewController: UIViewController, MapViewControllerProtocol, MKMapViewD
         reloadAnnotations()
     }
     
+    func setMapRegion(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 50000, 50000)
+        self.mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
     func reloadAnnotations() {
         mapView.removeAnnotations(mapView.annotations)
         self.cityInformationList.value.forEach { cityInformation in
@@ -56,6 +56,9 @@ class MapViewController: UIViewController, MapViewControllerProtocol, MKMapViewD
     }
     
     func locationUpdated(location: CLLocation) {
+        if currentLocation.value.distance(from: location) > 1000 {
+            setMapRegion(location: location)
+        }
         currentLocation.value = location
     }
     

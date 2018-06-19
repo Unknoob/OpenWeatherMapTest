@@ -258,26 +258,26 @@ MzAPwrpDA
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ar3-73-Hv6">
-                                <rect key="frame" x="20" y="268" width="50" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed: Not measured" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ar3-73-Hv6">
+                                <rect key="frame" x="20" y="268" width="166.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Direction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufz-eY-g3U">
-                                <rect key="frame" x="20" y="291" width="69" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Direction: Not measured" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufz-eY-g3U">
+                                <rect key="frame" x="20" y="291" width="186.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pressure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFz-5H-t0q">
-                                <rect key="frame" x="20" y="366" width="68" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pressure: Not measured" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFz-5H-t0q">
+                                <rect key="frame" x="20" y="366" width="184.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7u-lr-nau">
-                                <rect key="frame" x="20" y="389" width="69" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity: Not measured" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7u-lr-nau">
+                                <rect key="frame" x="20" y="389" width="186" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -331,6 +331,7 @@ MzAPwrpDA
                     <connections>
                         <outlet property="airHumidityLabel" destination="x7u-lr-nau" id="iLx-1G-FMG"/>
                         <outlet property="airPressureLabel" destination="UFz-5H-t0q" id="dzU-aN-EIc"/>
+                        <outlet property="airTitleLabel" destination="D1G-ya-Yvx" id="57J-zi-R6t"/>
                         <outlet property="cityNameLabel" destination="6fi-tD-KdA" id="2pH-PF-fmJ"/>
                         <outlet property="currentTemperatureLabel" destination="a9T-Ig-YfO" id="rsz-dM-qxy"/>
                         <outlet property="dateLabel" destination="9FO-3t-Zss" id="cQk-Y2-QvC"/>
@@ -342,6 +343,7 @@ MzAPwrpDA
                         <outlet property="minimumTemperatureLabel" destination="rQ5-Yd-6k3" id="bmK-80-tVG"/>
                         <outlet property="windDirectionLabel" destination="ufz-eY-g3U" id="pzN-Eo-V0A"/>
                         <outlet property="windSpeedLabel" destination="Ar3-73-Hv6" id="2ti-UN-YKl"/>
+                        <outlet property="windTitleLabel" destination="1UF-Gv-gcT" id="dd8-Fp-oWQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7yt-Gy-aZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>

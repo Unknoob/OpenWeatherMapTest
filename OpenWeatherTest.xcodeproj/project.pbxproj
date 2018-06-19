@@ -50,6 +50,8 @@
 		A761B96B20D8A64D00F81F86 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B96A20D8A64D00F81F86 /* PreviewViewController.swift */; };
 		A761B96D20D8AC3D00F81F86 /* PreviewRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B96C20D8AC3D00F81F86 /* PreviewRouterProtocol.swift */; };
 		A761B96F20D8AC6100F81F86 /* PreviewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B96E20D8AC6100F81F86 /* PreviewRouter.swift */; };
+		A761B97120D9269E00F81F86 /* DecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B97020D9269E00F81F86 /* DecodingError.swift */; };
+		A761B97320D9275200F81F86 /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B97220D9275200F81F86 /* GenericError.swift */; };
 		A7A16A2020D1DAFD003E1830 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A1F20D1DAFD003E1830 /* AppDelegate.swift */; };
 		A7A16A2220D1DAFD003E1830 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A2120D1DAFD003E1830 /* ListViewController.swift */; };
 		A7A16A2420D1DAFD003E1830 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A2320D1DAFD003E1830 /* MapViewController.swift */; };
@@ -126,6 +128,8 @@
 		A761B96A20D8A64D00F81F86 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		A761B96C20D8AC3D00F81F86 /* PreviewRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewRouterProtocol.swift; sourceTree = "<group>"; };
 		A761B96E20D8AC6100F81F86 /* PreviewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewRouter.swift; sourceTree = "<group>"; };
+		A761B97020D9269E00F81F86 /* DecodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingError.swift; sourceTree = "<group>"; };
+		A761B97220D9275200F81F86 /* GenericError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericError.swift; sourceTree = "<group>"; };
 		A7A16A1C20D1DAFD003E1830 /* OpenWeatherTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeatherTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A16A1F20D1DAFD003E1830 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7A16A2120D1DAFD003E1830 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -388,6 +392,8 @@
 			children = (
 				A761B95E20D887D500F81F86 /* NetworkError.swift */,
 				A761B96120D88E4700F81F86 /* Error+Code.swift */,
+				A761B97020D9269E00F81F86 /* DecodingError.swift */,
+				A761B97220D9275200F81F86 /* GenericError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -721,6 +727,7 @@
 				A761B95320D5984700F81F86 /* ListTableViewCell.swift in Sources */,
 				A761B93E20D49AF500F81F86 /* MapViewControllerProtocol.swift in Sources */,
 				A7190B4220D46F5F003D62A5 /* Constants.swift in Sources */,
+				A761B97320D9275200F81F86 /* GenericError.swift in Sources */,
 				A761B96920D8A60500F81F86 /* PreviewViewControllerProtocol.swift in Sources */,
 				A761B96D20D8AC3D00F81F86 /* PreviewRouterProtocol.swift in Sources */,
 				A761B93820D4994D00F81F86 /* MapPresenterProtocol.swift in Sources */,
@@ -734,6 +741,7 @@
 				A761B90B20D48BA800F81F86 /* ListPresenterProtocol.swift in Sources */,
 				A761B93420D4993500F81F86 /* MapRouterProtocol.swift in Sources */,
 				A761B96B20D8A64D00F81F86 /* PreviewViewController.swift in Sources */,
+				A761B97120D9269E00F81F86 /* DecodingError.swift in Sources */,
 				A761B94F20D54C1C00F81F86 /* MainInformation.swift in Sources */,
 				A7190B5520D48104003D62A5 /* ListRouter.swift in Sources */,
 				A761B92B20D493D000F81F86 /* ContainerViewControllerProtocol.swift in Sources */,

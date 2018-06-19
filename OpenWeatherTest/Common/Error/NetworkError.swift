@@ -65,7 +65,3 @@ enum NetworkError: GenericError {
         }
     }
 }
-
-public protocol GenericError: Error {
-    var message: String { get }
-}

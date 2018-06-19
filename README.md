@@ -34,6 +34,7 @@ Which Pods I used and why :
  - ~~Force Touch on the List View Controller to show more information.~~
  - Allow filtering locations from the list.
  - Allow reordering the list.
+ - Allow loading more items.(Not sure if the API allows page=n parameter)
  - Prettier UX.
  - Add cool icons.
  - Separate the API calls in another class.
@@ -45,3 +46,4 @@ Which Pods I used and why :
  - Localization.
  - ~~Limit the API requests to only update information after a considerable distance has been walked.~~
  - ~~Learn how to format a README file.~~
+ - Configurable thresholds for fetching the weather information, both for distance and time.

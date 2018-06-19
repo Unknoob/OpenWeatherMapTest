@@ -19,8 +19,10 @@ class PreviewViewController: UIViewController, PreviewViewControllerProtocol {
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var windTitleLabel: UILabel!
     @IBOutlet weak var windSpeedLabel: UILabel!
     @IBOutlet weak var windDirectionLabel: UILabel!
+    @IBOutlet weak var airTitleLabel: UILabel!
     @IBOutlet weak var airPressureLabel: UILabel!
     @IBOutlet weak var airHumidityLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -28,6 +30,14 @@ class PreviewViewController: UIViewController, PreviewViewControllerProtocol {
     var cityInformation: CityInformation!
     var currentLocation: CLLocation!
     var selectedUnit: TemperatureUnit!
+    
+    override var previewActionItems: [UIPreviewActionItem] {
+        let dismissAction = UIPreviewAction(title: "Dismiss", style: .destructive) { _, _ in
+            
+        }
+        
+        return [dismissAction]
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,8 +55,21 @@ class PreviewViewController: UIViewController, PreviewViewControllerProtocol {
         let cityLocation = CLLocation(latitude: cityInformation.coordinates.latitude, longitude: cityInformation.coordinates.longitude)
         distanceLabel.text = "Distance: \(UnitHelper.distance(cityLocation.distance(from: currentLocation), inUnit: .metric))"
         
-        windSpeedLabel.text = "Speed: \(cityInformation.windInformation.speed) m/s"
-        windDirectionLabel.text = "Direction: \(cityInformation.windInformation.degrees) degrees"
+        if let windSpeed = cityInformation.windInformation.speed {
+            windSpeedLabel.text = "Speed: \(windSpeed) m/s"
+            windSpeedLabel.isHidden = false
+        } else {
+            windSpeedLabel.isHidden = true
+        }
+        
+        if let windDirection = cityInformation.windInformation.degrees {
+            windDirectionLabel.text = "Direction: \(windDirection) degrees"
+            windDirectionLabel.isHidden = false
+        } else {
+            windDirectionLabel.isHidden = true
+        }
+        
+        windTitleLabel.isHidden = windSpeedLabel.isHidden && windDirectionLabel.isHidden
         
         airPressureLabel.text = "Pressure: \(cityInformation.mainInformation.airPressure) hPa"
         airHumidityLabel.text = "Humidity: \(cityInformation.mainInformation.airHumidity) %"

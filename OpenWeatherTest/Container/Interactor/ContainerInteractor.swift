@@ -65,8 +65,13 @@ class ContainerInteractor: NSObject, ContainerInteractorProtocol, CLLocationMana
                         self.mapPresenter?.cityInformationUpdated(cityInformation: weatherInfo.citiesList)
                         self.isFetching = false
                     } catch {
-                        print("Decoding Error: \(error)")
-                        self.isFetching = false
+                        let decodingError = DecodingError.errorWithCode(error.code)
+                        self.containerPresenter?.showErrorMessage(error: decodingError, okBlock: {
+                            self.isFetching = false
+                        }, retryBlock: {
+                            self.isFetching = false
+                            self.getWeatherInformation()
+                        })
                     }
                 case .failure(let error):
                     self.containerPresenter?.showErrorMessage(error: error, okBlock: {
