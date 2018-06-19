@@ -88,9 +88,8 @@ class ContainerViewController: UIViewController, ContainerViewControllerProtocol
             self.selectedUnit.value = .fahrenheit
         case .fahrenheit:
             unitToggleButton.title = "Fº"
-
-            
             self.selectedUnit.value = .celsius
         }
     }
+
 }

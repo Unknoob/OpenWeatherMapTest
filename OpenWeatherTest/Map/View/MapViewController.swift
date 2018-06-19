@@ -32,6 +32,9 @@ class MapViewController: UIViewController, MapViewControllerProtocol, MKMapViewD
             self.mapView.setRegion(coordinateRegion, animated: true)
         }).disposed(by: disposeBag)
         
+        self.selectedUnit.asObservable().subscribe({ (selectedUnit) in
+            self.reloadAnnotations()
+        }).disposed(by: disposeBag)
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,9 +43,14 @@ class MapViewController: UIViewController, MapViewControllerProtocol, MKMapViewD
     
     func cityInformationUpdated(cityInformationList: [CityInformation]) {
         self.cityInformationList.value = cityInformationList
+        reloadAnnotations()
+    }
+    
+    func reloadAnnotations() {
         mapView.removeAnnotations(mapView.annotations)
-        cityInformationList.forEach { cityInformation in
-            let annotation = MapAnnotation(title: UnitHelper.temperature(cityInformation.mainInformation.currentTemperature, inUnit: selectedUnit.value), locationName: cityInformation.name, discipline: "TEST", imageName: cityInformation.weatherList.first!.icon, coordinate: CLLocationCoordinate2D(latitude: cityInformation.coordinates.latitude, longitude: cityInformation.coordinates.longitude))
+        self.cityInformationList.value.forEach { cityInformation in
+            let annotation = MapAnnotation(title: UnitHelper.temperature(cityInformation.mainInformation.currentTemperature, inUnit: selectedUnit.value), locationName: cityInformation.name, imageName: cityInformation.weatherList.first!.icon, coordinate: CLLocationCoordinate2D(latitude: cityInformation.coordinates.latitude, longitude: cityInformation.coordinates.longitude))
+            
             mapView.addAnnotation(annotation)
         }
     }
@@ -61,7 +69,7 @@ class MapViewController: UIViewController, MapViewControllerProtocol, MKMapViewD
         view.calloutOffset = CGPoint(x: 0, y: 20)
         let mapsButton = UIButton(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 30, height: 30)))
         
-        if let imageName = annotation.imageName, let imageURL = URL(string: "https://openweathermap.org/img/w/\(imageName)\(".png")") {
+        if let imageName = annotation.imageName, let imageURL = KingfisherHelper.generateURL(fromImageName: imageName) {
             KingfisherManager.shared.retrieveImage(with: imageURL, options: nil, progressBlock: nil, completionHandler: { downloadedImage, error, cacheType, imageURL in
                 mapsButton.setBackgroundImage(downloadedImage, for: .normal)
             })

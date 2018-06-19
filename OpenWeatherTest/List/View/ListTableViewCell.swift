@@ -22,7 +22,7 @@ class ListTableViewCell: UITableViewCell {
     @IBOutlet weak var weatherImageView: UIImageView!
     
     var selectedUnit: Variable<TemperatureUnit> = Variable(.celsius)
-    var currentLocation:  Variable<CLLocation> = Variable(CLLocation())
+    var currentLocation: Variable<CLLocation> = Variable(CLLocation())
     var disposeBag = DisposeBag()
     
     private var cityInformation: CityInformation!
@@ -31,7 +31,9 @@ class ListTableViewCell: UITableViewCell {
         self.cityInformation = cityInformation
         cityLabel.text = cityInformation.name
         
-        weatherImageView.kf.setImage(with: URL(string: "https://openweathermap.org/img/w/\(cityInformation.weatherList.first!.icon)\(".png")"))
+        if let imageName = cityInformation.weatherList.first?.icon {
+            weatherImageView.kf.setImage(with: KingfisherHelper.generateURL(fromImageName: imageName))
+        }
         
         setTemperatureWithCorrectUnit()
         

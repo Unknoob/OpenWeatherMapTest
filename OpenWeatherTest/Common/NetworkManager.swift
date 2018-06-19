@@ -31,14 +31,20 @@ public class NetworkManager {
         Alamofire.request(kBaseURL + requestPath, method: httpMethod, parameters: completeParameters).responseJSON { response in
             switch response.result {
             case .success:
-                print("Request: \(String(describing: response.request))")   // original url request
-                print("Response: \(String(describing: response.response))") // http url response
+                print("Request: \(String(describing: response.request))")
+                print("Response: \(String(describing: response.response))")
                 print("Result: \(response.result)")
                 print("JSON: \(try! JSONSerialization.jsonObject(with: response.data!, options: .allowFragments))")
+                
+                if let statusCode = response.response?.statusCode, statusCode != 200 {
+                    completion(.failure(NetworkError.errorWithCode(statusCode)))
+                    return
+                }
+                
                 completion(.success(response.data!))
                 
             case .failure(let error):
-                completion(.failure(error))
+                completion(.failure(NetworkError.errorWithCode(error.code)))
             }
         }
     }

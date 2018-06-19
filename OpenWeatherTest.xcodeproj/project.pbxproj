@@ -43,6 +43,9 @@
 		A761B95320D5984700F81F86 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B95220D5984700F81F86 /* ListTableViewCell.swift */; };
 		A761B95520D5A9EB00F81F86 /* UnitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B95420D5A9EB00F81F86 /* UnitHelper.swift */; };
 		A761B95820D74E6400F81F86 /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B95720D74E6400F81F86 /* MapAnnotation.swift */; };
+		A761B95F20D887D500F81F86 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B95E20D887D500F81F86 /* NetworkError.swift */; };
+		A761B96220D88E4700F81F86 /* Error+Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B96120D88E4700F81F86 /* Error+Code.swift */; };
+		A761B96420D899B800F81F86 /* KingfisherHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B96320D899B800F81F86 /* KingfisherHelper.swift */; };
 		A7A16A2020D1DAFD003E1830 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A1F20D1DAFD003E1830 /* AppDelegate.swift */; };
 		A7A16A2220D1DAFD003E1830 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A2120D1DAFD003E1830 /* ListViewController.swift */; };
 		A7A16A2420D1DAFD003E1830 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A2320D1DAFD003E1830 /* MapViewController.swift */; };
@@ -112,6 +115,9 @@
 		A761B95220D5984700F81F86 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		A761B95420D5A9EB00F81F86 /* UnitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitHelper.swift; sourceTree = "<group>"; };
 		A761B95720D74E6400F81F86 /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
+		A761B95E20D887D500F81F86 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		A761B96120D88E4700F81F86 /* Error+Code.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Code.swift"; sourceTree = "<group>"; };
+		A761B96320D899B800F81F86 /* KingfisherHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherHelper.swift; sourceTree = "<group>"; };
 		A7A16A1C20D1DAFD003E1830 /* OpenWeatherTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeatherTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A16A1F20D1DAFD003E1830 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7A16A2120D1DAFD003E1830 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -255,10 +261,12 @@
 		A7190B3E20D46ED1003D62A5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A761B95D20D8878C00F81F86 /* Error */,
 				A761B94320D4A79800F81F86 /* Model */,
 				A7190B4120D46F5F003D62A5 /* Constants.swift */,
 				A7190B3F20D46F00003D62A5 /* NetworkManager.swift */,
 				A761B95420D5A9EB00F81F86 /* UnitHelper.swift */,
+				A761B96320D899B800F81F86 /* KingfisherHelper.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -365,6 +373,15 @@
 				A761B95720D74E6400F81F86 /* MapAnnotation.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A761B95D20D8878C00F81F86 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				A761B95E20D887D500F81F86 /* NetworkError.swift */,
+				A761B96120D88E4700F81F86 /* Error+Code.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 		A7A16A1320D1DAFD003E1830 = {
@@ -672,6 +689,8 @@
 				A761B92620D4939D00F81F86 /* ContainerRouterProtocol.swift in Sources */,
 				A7190B4020D46F00003D62A5 /* NetworkManager.swift in Sources */,
 				A761B93620D4993E00F81F86 /* MapPresenter.swift in Sources */,
+				A761B95F20D887D500F81F86 /* NetworkError.swift in Sources */,
+				A761B96220D88E4700F81F86 /* Error+Code.swift in Sources */,
 				A761B94B20D4ABEF00F81F86 /* Wind.swift in Sources */,
 				A761B95820D74E6400F81F86 /* MapAnnotation.swift in Sources */,
 				A761B90B20D48BA800F81F86 /* ListPresenterProtocol.swift in Sources */,
@@ -687,6 +706,7 @@
 				A7190B5020D4804D003D62A5 /* RootRouterProtocol.swift in Sources */,
 				A761B90920D48B9100F81F86 /* ListPresenter.swift in Sources */,
 				A761B91D20D48E1000F81F86 /* ListViewControllerProtocol.swift in Sources */,
+				A761B96420D899B800F81F86 /* KingfisherHelper.swift in Sources */,
 				A761B92D20D494AA00F81F86 /* ContainerInteractor.swift in Sources */,
 				A761B94720D4A84300F81F86 /* CityInformation.swift in Sources */,
 				A761B90520D4884200F81F86 /* ContainerViewController.swift in Sources */,
@@ -846,13 +866,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LV8ZHMBYJ6;
+				DEVELOPMENT_TEAM = 54MQQS737M;
 				INFOPLIST_FILE = "$(SRCROOT)/OpenWeatherTest/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gabecode.OpenWeatherTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gabecode.luizalabsopenweathertest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -865,13 +885,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LV8ZHMBYJ6;
+				DEVELOPMENT_TEAM = 54MQQS737M;
 				INFOPLIST_FILE = "$(SRCROOT)/OpenWeatherTest/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gabecode.OpenWeatherTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gabecode.luizalabsopenweathertest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

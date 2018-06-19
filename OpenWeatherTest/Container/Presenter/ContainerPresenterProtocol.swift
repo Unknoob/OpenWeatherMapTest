@@ -14,5 +14,5 @@ protocol ContainerPresenterProtocol: class {
     var viewController: ContainerViewControllerProtocol! { get set }
     var interactor: ContainerInteractorProtocol! { get set }
     var router: ContainerRouterProtocol! { get set }
-    
+    func showErrorMessage(error: GenericError, okBlock: @escaping () -> (), retryBlock: @escaping () -> ())
 }

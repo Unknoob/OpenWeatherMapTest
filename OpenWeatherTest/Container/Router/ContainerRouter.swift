@@ -35,4 +35,21 @@ class ContainerRouter: ContainerRouterProtocol {
         
         return containerViewController
     }
+    
+    func showErrorMessage(error: GenericError, okBlock: @escaping () -> (), retryBlock: @escaping () -> ()) {
+        let alertController = UIAlertController(title: "Something went wrong", message: error.message, preferredStyle: .alert)
+        
+        let dismissOption = UIAlertAction(title: "OK", style: .default) { _ in
+            okBlock()
+        }
+        alertController.addAction(dismissOption)
+        
+        let retryOption = UIAlertAction(title: "Retry", style: .default) { _ in
+            retryBlock()
+        }
+        
+        alertController.addAction(retryOption)
+        
+        viewController?.present(alertController, animated: true, completion: nil)
+    }
 }

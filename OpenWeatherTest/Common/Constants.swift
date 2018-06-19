@@ -9,11 +9,11 @@
 import Foundation
 
 /// An enum containing the possible results of a request.
-/// - failure: Returns an Error.
+/// - failure: Returns a GenericError.
 /// - success: Returns a Value specified on implementation.
 public enum Result<Value> {
-    /// - failure: Returns an NSError.
-    case failure(Error)
+    /// - failure: Returns a GenericError.
+    case failure(GenericError)
     /// - success: Returns a value specified on implementation.
     case success(Value)
 }

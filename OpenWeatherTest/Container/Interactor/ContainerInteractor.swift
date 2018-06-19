@@ -69,8 +69,13 @@ class ContainerInteractor: NSObject, ContainerInteractorProtocol, CLLocationMana
                         self.isFetching = false
                     }
                 case .failure(let error):
-                    print("NO")
-                    self.isFetching = false
+                    self.containerPresenter?.showErrorMessage(error: error, okBlock: {
+                        self.isFetching = false
+                    }, retryBlock: {
+                        self.isFetching = false
+                        self.getWeatherInformation()
+                    })
+                    
                 }
             }
         }

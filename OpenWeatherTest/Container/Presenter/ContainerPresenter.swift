@@ -16,5 +16,7 @@ class ContainerPresenter: ContainerPresenterProtocol {
     var router: ContainerRouterProtocol!
     var dispose = DisposeBag()
 
-    
+    func showErrorMessage(error: GenericError, okBlock: @escaping () -> (), retryBlock: @escaping () -> ()) {
+        router.showErrorMessage(error: error, okBlock: okBlock, retryBlock: retryBlock)
+    }
 }

@@ -7,6 +7,7 @@
 //
 
 import CoreLocation
+import UIKit
 
 protocol ContainerViewControllerProtocol: class {
     var presenter: ContainerPresenterProtocol! { get set }
