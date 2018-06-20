@@ -16,4 +16,6 @@ protocol ContainerPresenterProtocol: class {
     var router: ContainerRouterProtocol! { get set }
     func showErrorMessage(error: GenericError, okBlock: @escaping () -> (), retryBlock: @escaping () -> ())
     func showErrorAndSendToSettings()
+    func startLoading()
+    func stopLoading()
 }

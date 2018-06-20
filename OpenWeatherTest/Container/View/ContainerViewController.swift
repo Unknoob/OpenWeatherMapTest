@@ -11,7 +11,7 @@ import CoreLocation
 import RxSwift
 import RxCocoa
 
-class ContainerViewController: UIViewController, ContainerViewControllerProtocol {
+class ContainerViewController: UIViewController, ContainerViewControllerProtocol, Loadable {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var customNavigation: UINavigationItem!

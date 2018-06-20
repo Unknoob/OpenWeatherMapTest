@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
@@ -177,7 +176,6 @@ MzAPwrpDA
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="List" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="tableView" destination="QDp-lM-1FN" id="H7D-m1-4lh"/>
                     </connections>
@@ -371,8 +369,6 @@ MzAPwrpDA
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="second" id="cPa-gy-q4n" userLabel="Map"/>
-                    <navigationItem key="navigationItem" id="04u-YN-grn"/>
                     <connections>
                         <outlet property="mapView" destination="shH-u6-llQ" id="mYd-jz-CqA"/>
                     </connections>
@@ -382,8 +378,4 @@ MzAPwrpDA
             <point key="canvasLocation" x="529" y="367"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
-    </resources>
 </document>

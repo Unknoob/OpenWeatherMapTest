@@ -23,4 +23,12 @@ class ContainerPresenter: ContainerPresenterProtocol {
     func showErrorAndSendToSettings() {
         router.showErrorAndSendToSettings()
     }
+    
+    func startLoading() {
+        viewController.startLoading()
+    }
+    
+    func stopLoading() {
+        viewController.stopLoading()
+    }
 }
