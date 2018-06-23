@@ -34,12 +34,12 @@
                                 <items>
                                     <navigationItem id="Klx-t7-23Z">
                                         <rightBarButtonItems>
-                                            <barButtonItem title="Map" id="uK3-fg-dfA">
+                                            <barButtonItem title="Map" image="map_icon" id="uK3-fg-dfA">
                                                 <connections>
                                                     <action selector="toggleListingType:" destination="3Im-1U-d5v" id="H9i-2z-FF9"/>
                                                 </connections>
                                             </barButtonItem>
-                                            <barButtonItem title="Fº" id="UVQ-EY-kuv">
+                                            <barButtonItem title="ºF" id="UVQ-EY-kuv">
                                                 <connections>
                                                     <action selector="toggleTemperatureUnit:" destination="3Im-1U-d5v" id="hMK-hY-Tea"/>
                                                 </connections>
@@ -378,4 +378,7 @@ MzAPwrpDA
             <point key="canvasLocation" x="529" y="367"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="map_icon" width="22" height="22"/>
+    </resources>
 </document>

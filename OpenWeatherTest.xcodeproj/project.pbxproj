@@ -15,7 +15,6 @@
 		A7190B5020D4804D003D62A5 /* RootRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7190B4F20D4804D003D62A5 /* RootRouterProtocol.swift */; };
 		A7190B5320D480F7003D62A5 /* ListRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7190B5220D480F7003D62A5 /* ListRouterProtocol.swift */; };
 		A7190B5520D48104003D62A5 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7190B5420D48104003D62A5 /* ListRouter.swift */; };
-		A749E5E020D9E4A4002FDDCF /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749E5DF20D9E4A4002FDDCF /* Loadable.swift */; };
 		A761B90520D4884200F81F86 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B90420D4884200F81F86 /* ContainerViewController.swift */; };
 		A761B90920D48B9100F81F86 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B90820D48B9100F81F86 /* ListPresenter.swift */; };
 		A761B90B20D48BA800F81F86 /* ListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B90A20D48BA800F81F86 /* ListPresenterProtocol.swift */; };
@@ -53,6 +52,7 @@
 		A761B96F20D8AC6100F81F86 /* PreviewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B96E20D8AC6100F81F86 /* PreviewRouter.swift */; };
 		A761B97120D9269E00F81F86 /* DecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B97020D9269E00F81F86 /* DecodingError.swift */; };
 		A761B97320D9275200F81F86 /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B97220D9275200F81F86 /* GenericError.swift */; };
+		A76348E620DEAC0600AD883A /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76348E520DEAC0600AD883A /* Loadable.swift */; };
 		A7A16A2020D1DAFD003E1830 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A1F20D1DAFD003E1830 /* AppDelegate.swift */; };
 		A7A16A2220D1DAFD003E1830 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A2120D1DAFD003E1830 /* ListViewController.swift */; };
 		A7A16A2420D1DAFD003E1830 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A2320D1DAFD003E1830 /* MapViewController.swift */; };
@@ -94,7 +94,6 @@
 		A7190B4F20D4804D003D62A5 /* RootRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouterProtocol.swift; sourceTree = "<group>"; };
 		A7190B5220D480F7003D62A5 /* ListRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterProtocol.swift; sourceTree = "<group>"; };
 		A7190B5420D48104003D62A5 /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
-		A749E5DF20D9E4A4002FDDCF /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 		A761B90420D4884200F81F86 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		A761B90820D48B9100F81F86 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		A761B90A20D48BA800F81F86 /* ListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -132,6 +131,7 @@
 		A761B96E20D8AC6100F81F86 /* PreviewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewRouter.swift; sourceTree = "<group>"; };
 		A761B97020D9269E00F81F86 /* DecodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingError.swift; sourceTree = "<group>"; };
 		A761B97220D9275200F81F86 /* GenericError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericError.swift; sourceTree = "<group>"; };
+		A76348E520DEAC0600AD883A /* Loadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 		A7A16A1C20D1DAFD003E1830 /* OpenWeatherTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeatherTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A16A1F20D1DAFD003E1830 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7A16A2120D1DAFD003E1830 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -315,7 +315,7 @@
 		A749E5DE20D9E492002FDDCF /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				A749E5DF20D9E4A4002FDDCF /* Loadable.swift */,
+				A76348E520DEAC0600AD883A /* Loadable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -755,7 +755,7 @@
 				A761B97120D9269E00F81F86 /* DecodingError.swift in Sources */,
 				A761B94F20D54C1C00F81F86 /* MainInformation.swift in Sources */,
 				A7190B5520D48104003D62A5 /* ListRouter.swift in Sources */,
-				A749E5E020D9E4A4002FDDCF /* Loadable.swift in Sources */,
+				A76348E620DEAC0600AD883A /* Loadable.swift in Sources */,
 				A761B92B20D493D000F81F86 /* ContainerViewControllerProtocol.swift in Sources */,
 				A761B94920D4A98900F81F86 /* Coordinates.swift in Sources */,
 				A7A16A2420D1DAFD003E1830 /* MapViewController.swift in Sources */,

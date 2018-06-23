@@ -62,7 +62,7 @@ class ContainerViewController: UIViewController, ContainerViewControllerProtocol
             
             customNavigation.title = activeView.rawValue
             activeView = .map
-            listingToggleButton.title = activeView.rawValue
+            listingToggleButton.image = #imageLiteral(resourceName: "map_icon")
         case .map:
             listViewController.willMove(toParentViewController: nil)
             listViewController.view.removeFromSuperview()
@@ -77,17 +77,17 @@ class ContainerViewController: UIViewController, ContainerViewControllerProtocol
             
             customNavigation.title = activeView.rawValue
             activeView = .list
-            listingToggleButton.title = activeView.rawValue
+            listingToggleButton.image = #imageLiteral(resourceName: "list_icon")
         }
     }
     
     @IBAction func toggleTemperatureUnit(_ sender: Any) {
         switch selectedUnit.value {
         case .celsius:
-            unitToggleButton.title = "Cº"
+            unitToggleButton.title = "ºC"
             self.selectedUnit.value = .fahrenheit
         case .fahrenheit:
-            unitToggleButton.title = "Fº"
+            unitToggleButton.title = "ºF"
             self.selectedUnit.value = .celsius
         }
     }
