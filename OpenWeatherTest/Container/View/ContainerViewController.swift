@@ -15,6 +15,7 @@ class ContainerViewController: UIViewController, ContainerViewControllerProtocol
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var customNavigation: UINavigationItem!
+    @IBOutlet weak var refreshButton: UIBarButtonItem!
     @IBOutlet weak var listingToggleButton: UIBarButtonItem!
     @IBOutlet weak var unitToggleButton: UIBarButtonItem!
     
@@ -90,6 +91,10 @@ class ContainerViewController: UIViewController, ContainerViewControllerProtocol
             unitToggleButton.title = "ºF"
             self.selectedUnit.value = .celsius
         }
+    }
+    
+    @IBAction func refreshInformation(_ sender: Any) {
+        self.presenter.interactor.getWeatherInformation()
     }
 
 }

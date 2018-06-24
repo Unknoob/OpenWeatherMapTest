@@ -33,6 +33,11 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem id="Klx-t7-23Z">
+                                        <barButtonItem key="leftBarButtonItem" title="Refresh" id="0Tj-k1-HAG">
+                                            <connections>
+                                                <action selector="refreshInformation:" destination="3Im-1U-d5v" id="NGY-BW-AIt"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <rightBarButtonItems>
                                             <barButtonItem title="Map" image="map_icon" id="uK3-fg-dfA">
                                                 <connections>
@@ -65,6 +70,7 @@
                         <outlet property="containerView" destination="Ker-03-oYw" id="abm-al-rsd"/>
                         <outlet property="customNavigation" destination="Klx-t7-23Z" id="uCa-xy-dwb"/>
                         <outlet property="listingToggleButton" destination="uK3-fg-dfA" id="Rub-Et-TjU"/>
+                        <outlet property="refreshButton" destination="0Tj-k1-HAG" id="ID6-N6-Nce"/>
                         <outlet property="unitToggleButton" destination="UVQ-EY-kuv" id="Fme-vP-bIE"/>
                     </connections>
                 </viewController>
