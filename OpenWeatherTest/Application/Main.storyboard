@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
@@ -34,13 +33,18 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem id="Klx-t7-23Z">
+                                        <barButtonItem key="leftBarButtonItem" title="Refresh" id="0Tj-k1-HAG">
+                                            <connections>
+                                                <action selector="refreshInformation:" destination="3Im-1U-d5v" id="NGY-BW-AIt"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <rightBarButtonItems>
-                                            <barButtonItem title="Map" id="uK3-fg-dfA">
+                                            <barButtonItem title="Map" image="map_icon" id="uK3-fg-dfA">
                                                 <connections>
                                                     <action selector="toggleListingType:" destination="3Im-1U-d5v" id="H9i-2z-FF9"/>
                                                 </connections>
                                             </barButtonItem>
-                                            <barButtonItem title="Fº" id="UVQ-EY-kuv">
+                                            <barButtonItem title="ºF" id="UVQ-EY-kuv">
                                                 <connections>
                                                     <action selector="toggleTemperatureUnit:" destination="3Im-1U-d5v" id="hMK-hY-Tea"/>
                                                 </connections>
@@ -66,6 +70,7 @@
                         <outlet property="containerView" destination="Ker-03-oYw" id="abm-al-rsd"/>
                         <outlet property="customNavigation" destination="Klx-t7-23Z" id="uCa-xy-dwb"/>
                         <outlet property="listingToggleButton" destination="uK3-fg-dfA" id="Rub-Et-TjU"/>
+                        <outlet property="refreshButton" destination="0Tj-k1-HAG" id="ID6-N6-Nce"/>
                         <outlet property="unitToggleButton" destination="UVQ-EY-kuv" id="Fme-vP-bIE"/>
                     </connections>
                 </viewController>
@@ -177,7 +182,6 @@ MzAPwrpDA
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="List" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="tableView" destination="QDp-lM-1FN" id="H7D-m1-4lh"/>
                     </connections>
@@ -288,6 +292,13 @@ MzAPwrpDA
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAE-kR-XJh">
+                                <rect key="frame" x="316" y="40" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="didTouchCloseButton:" destination="w1S-dz-Pou" eventType="touchUpInside" id="CRA-pv-Bn9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -296,12 +307,14 @@ MzAPwrpDA
                             <constraint firstItem="x7u-lr-nau" firstAttribute="leading" secondItem="D1G-ya-Yvx" secondAttribute="leading" id="5Y4-bR-52o"/>
                             <constraint firstItem="Iqy-pB-HSI" firstAttribute="top" secondItem="4HD-Il-hfM" secondAttribute="top" constant="20" id="9Zj-7F-kI4"/>
                             <constraint firstItem="Iqy-pB-HSI" firstAttribute="leading" secondItem="4HD-Il-hfM" secondAttribute="leading" constant="20" id="CYE-PE-hZw"/>
+                            <constraint firstItem="4HD-Il-hfM" firstAttribute="trailing" secondItem="RAE-kR-XJh" secondAttribute="trailing" constant="20" id="CZ3-Zv-a1t"/>
                             <constraint firstItem="QYc-xy-A61" firstAttribute="top" secondItem="6fi-tD-KdA" secondAttribute="bottom" constant="10" id="Cl1-fL-3LB"/>
                             <constraint firstItem="UFz-5H-t0q" firstAttribute="top" secondItem="D1G-ya-Yvx" secondAttribute="bottom" constant="10" id="E5X-Nm-bJ7"/>
                             <constraint firstItem="Ar3-73-Hv6" firstAttribute="leading" secondItem="1UF-Gv-gcT" secondAttribute="leading" id="FPF-EQ-lla"/>
                             <constraint firstItem="D1G-ya-Yvx" firstAttribute="top" secondItem="ufz-eY-g3U" secondAttribute="bottom" constant="20" id="GyY-qA-7f9"/>
                             <constraint firstItem="4HD-Il-hfM" firstAttribute="trailing" secondItem="6fi-tD-KdA" secondAttribute="trailing" constant="20" id="Jwr-Oh-7IT"/>
                             <constraint firstItem="a9T-Ig-YfO" firstAttribute="leading" secondItem="Iqy-pB-HSI" secondAttribute="trailing" constant="6" id="Opr-Ig-3kD"/>
+                            <constraint firstItem="RAE-kR-XJh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="a9T-Ig-YfO" secondAttribute="trailing" constant="10" id="Q18-XU-0sP"/>
                             <constraint firstItem="4HD-Il-hfM" firstAttribute="bottom" secondItem="9FO-3t-Zss" secondAttribute="bottom" constant="20" id="TeZ-of-YA5"/>
                             <constraint firstItem="1UF-Gv-gcT" firstAttribute="top" secondItem="ZST-RO-yPO" secondAttribute="bottom" constant="20" id="UbU-9V-4pT"/>
                             <constraint firstItem="Ar3-73-Hv6" firstAttribute="top" secondItem="1UF-Gv-gcT" secondAttribute="bottom" constant="10" id="VJz-3n-xn1"/>
@@ -322,6 +335,7 @@ MzAPwrpDA
                             <constraint firstItem="RqS-NE-jBq" firstAttribute="top" secondItem="QYc-xy-A61" secondAttribute="bottom" constant="2" id="oyZ-t8-80A"/>
                             <constraint firstItem="ZST-RO-yPO" firstAttribute="top" secondItem="RqS-NE-jBq" secondAttribute="bottom" constant="2" id="qzS-a0-TMx"/>
                             <constraint firstItem="9FO-3t-Zss" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4HD-Il-hfM" secondAttribute="leading" constant="20" id="tMG-xD-Md4"/>
+                            <constraint firstItem="RAE-kR-XJh" firstAttribute="top" secondItem="4HD-Il-hfM" secondAttribute="top" constant="20" id="u7o-ui-I8R"/>
                             <constraint firstItem="QYc-xy-A61" firstAttribute="leading" secondItem="6fi-tD-KdA" secondAttribute="leading" id="vSG-nL-EL5"/>
                             <constraint firstItem="ufz-eY-g3U" firstAttribute="top" secondItem="Ar3-73-Hv6" secondAttribute="bottom" constant="2" id="weR-hf-ezj"/>
                             <constraint firstItem="a9T-Ig-YfO" firstAttribute="top" secondItem="4HD-Il-hfM" secondAttribute="top" constant="20" id="xtb-1K-c7x"/>
@@ -333,6 +347,7 @@ MzAPwrpDA
                         <outlet property="airPressureLabel" destination="UFz-5H-t0q" id="dzU-aN-EIc"/>
                         <outlet property="airTitleLabel" destination="D1G-ya-Yvx" id="57J-zi-R6t"/>
                         <outlet property="cityNameLabel" destination="6fi-tD-KdA" id="2pH-PF-fmJ"/>
+                        <outlet property="closeButton" destination="RAE-kR-XJh" id="QQ2-A7-kC5"/>
                         <outlet property="currentTemperatureLabel" destination="a9T-Ig-YfO" id="rsz-dM-qxy"/>
                         <outlet property="dateLabel" destination="9FO-3t-Zss" id="cQk-Y2-QvC"/>
                         <outlet property="distanceLabel" destination="ZST-RO-yPO" id="i7D-u8-xcv"/>
@@ -371,8 +386,6 @@ MzAPwrpDA
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="second" id="cPa-gy-q4n" userLabel="Map"/>
-                    <navigationItem key="navigationItem" id="04u-YN-grn"/>
                     <connections>
                         <outlet property="mapView" destination="shH-u6-llQ" id="mYd-jz-CqA"/>
                     </connections>
@@ -383,7 +396,6 @@ MzAPwrpDA
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="map_icon" width="22" height="22"/>
     </resources>
 </document>

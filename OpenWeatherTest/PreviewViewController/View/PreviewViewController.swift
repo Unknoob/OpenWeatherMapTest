@@ -26,17 +26,23 @@ class PreviewViewController: UIViewController, PreviewViewControllerProtocol {
     @IBOutlet weak var airPressureLabel: UILabel!
     @IBOutlet weak var airHumidityLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var closeButton: UIButton!
     
+    var presenter: PreviewPresenterProtocol!
     var cityInformation: CityInformation!
     var currentLocation: CLLocation!
     var selectedUnit: TemperatureUnit!
     
     override var previewActionItems: [UIPreviewActionItem] {
+        let showAction = UIPreviewAction(title: "Show on map", style: .default) { _, _ in
+            self.presenter.selectAnnotation(for: self.cityInformation)
+        }
+        
         let dismissAction = UIPreviewAction(title: "Dismiss", style: .destructive) { _, _ in
             
         }
         
-        return [dismissAction]
+        return [showAction, dismissAction]
     }
     
     override func viewDidLoad() {
@@ -75,4 +81,13 @@ class PreviewViewController: UIViewController, PreviewViewControllerProtocol {
         airHumidityLabel.text = "Humidity: \(cityInformation.mainInformation.airHumidity) %"
         dateLabel.text = "Last updated: \(UnitHelper.formatDate(date: cityInformation.date))"
     }
+    
+    func showCloseButton(_ shouldShow: Bool) {
+        closeButton.isHidden = !shouldShow
+    }
+    
+    @IBAction func didTouchCloseButton(_ sender: UIButton) {
+        self.presenter.router.dismiss()
+    }
+    
 }

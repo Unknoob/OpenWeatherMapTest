@@ -38,8 +38,10 @@ Which Pods I used and why :
  - Prettier UX.
  - Add cool icons.
  - Separate the API calls in another class.
- - Better error handling.
- - Loading indicators.
+ - ~~Error handling.~~
+ - Better error handling(Handle API errors instead of just network and decode errors).
+ - ~~Loading indicators.~~
+ - Better loading indicators.
  - Code comments.
  - Unit tests.
  - UI tests.
@@ -47,3 +49,4 @@ Which Pods I used and why :
  - ~~Limit the API requests to only update information after a considerable distance has been walked.~~
  - ~~Learn how to format a README file.~~
  - Configurable thresholds for fetching the weather information, both for distance and time.
+ - Configurable UI(Temperature, pressure, distance units).

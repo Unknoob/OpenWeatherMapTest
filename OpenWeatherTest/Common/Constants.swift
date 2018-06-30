@@ -12,19 +12,29 @@ import Foundation
 /// - failure: Returns a GenericError.
 /// - success: Returns a Value specified on implementation.
 public enum Result<Value> {
-    /// - failure: Returns a GenericError.
+    /// Returns a GenericError.
     case failure(GenericError)
-    /// - success: Returns a value specified on implementation.
+    /// Returns a value specified on implementation.
     case success(Value)
 }
 
-public enum ViewType: String {
-    case list = "List"
-    case map = "Map"
+/// An enum containing the types of visualization allowed.
+/// - list: The list visualization mode.
+/// - map: The map visualization mode.
+public enum ViewType {
+    /// The list visualization mode.
+    case list
+    /// The map visualization mode.
+    case map
 }
 
+/// An enum containing the temperature units allowed.
+/// - celsius: The metric unit for temperature.
+/// - fahrenheit: The imperial unit for temperature.
 public enum TemperatureUnit {
+    /// The metric unit for temperature.
     case celsius
+    /// The imperial unit for temperature.
     case fahrenheit
 }
 
@@ -33,7 +43,7 @@ public enum DistanceUnit {
     case imperial
 }
 
-/// A normal Dictionary
+/// A normal Dictionary.
 public typealias JSONDictionary = [String: Any]
-/// An array of dictionaries
+/// An array of Dictionaries.
 public typealias JSONArray = [JSONDictionary]

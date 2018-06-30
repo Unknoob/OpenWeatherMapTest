@@ -32,8 +32,10 @@ class MapViewController: UIViewController, MapViewControllerProtocol, MKMapViewD
         }).disposed(by: disposeBag)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    func selectAnnotation(for cityInformation: CityInformation) {
+        if let annotation = mapView.annotations.filter({ $0.subtitle == cityInformation.name }).first {
+            mapView.selectAnnotation(annotation, animated: true)
+        }
     }
     
     func cityInformationUpdated(cityInformationList: [CityInformation]) {

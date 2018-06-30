@@ -12,4 +12,5 @@ protocol ContainerInteractorProtocol: class {
     var mapPresenter: MapPresenterProtocol? { get set }
     
     func requestPermission()
+    func getWeatherInformation()
 }

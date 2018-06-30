@@ -10,7 +10,7 @@ import CoreLocation
 
 class ListPresenter: ListPresenterProtocol {
     weak var viewController: ListViewControllerProtocol!
-    var router: ListRouterProtocol!
+    var router: ContainerRouterProtocol!
     
     func cityInformationUpdated(cityInformation: [CityInformation]) {
         viewController.cityInformationUpdated(cityInformationList: cityInformation)

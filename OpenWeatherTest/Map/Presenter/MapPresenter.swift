@@ -10,7 +10,11 @@ import CoreLocation
 
 class MapPresenter: MapPresenterProtocol {
     weak var viewController: MapViewControllerProtocol!
-    var router: MapRouterProtocol!
+    var router: ContainerRouterProtocol!
+    
+    func selectAnnotation(for cityInformation: CityInformation) {
+        viewController.selectAnnotation(for: cityInformation)
+    }
     
     func cityInformationUpdated(cityInformation: [CityInformation]) {
         viewController.cityInformationUpdated(cityInformationList: cityInformation)

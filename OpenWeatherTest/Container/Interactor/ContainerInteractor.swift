@@ -34,7 +34,15 @@ class ContainerInteractor: NSObject, ContainerInteractorProtocol, CLLocationMana
         }
     }
     
-    var isFetching: Bool = false
+    var isFetching: Bool = false {
+        didSet {
+            if isFetching {
+                containerPresenter?.startLoading()
+            } else {
+                containerPresenter?.stopLoading()
+            }
+        }
+    }
     
     func requestPermission() {
         locationManager.requestWhenInUseAuthorization()

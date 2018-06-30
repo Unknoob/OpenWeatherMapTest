@@ -8,7 +8,7 @@
 
 import CoreLocation
 
-protocol ContainerViewControllerProtocol: class {
+protocol ContainerViewControllerProtocol: Loadable {
     var presenter: ContainerPresenterProtocol! { get set }
     func locationUpdated(location: CLLocation)
 }

@@ -8,6 +8,7 @@
 
 import Alamofire
 
+/// The class responsible for all network requests.
 public class NetworkManager {
     // MARK: - Attributes
     

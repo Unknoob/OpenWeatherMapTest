@@ -13,8 +13,6 @@
 		A7190B4620D4751B003D62A5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7190B4520D4751B003D62A5 /* MapKit.framework */; };
 		A7190B4D20D4802C003D62A5 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7190B4C20D4802C003D62A5 /* RootRouter.swift */; };
 		A7190B5020D4804D003D62A5 /* RootRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7190B4F20D4804D003D62A5 /* RootRouterProtocol.swift */; };
-		A7190B5320D480F7003D62A5 /* ListRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7190B5220D480F7003D62A5 /* ListRouterProtocol.swift */; };
-		A7190B5520D48104003D62A5 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7190B5420D48104003D62A5 /* ListRouter.swift */; };
 		A761B90520D4884200F81F86 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B90420D4884200F81F86 /* ContainerViewController.swift */; };
 		A761B90920D48B9100F81F86 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B90820D48B9100F81F86 /* ListPresenter.swift */; };
 		A761B90B20D48BA800F81F86 /* ListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B90A20D48BA800F81F86 /* ListPresenterProtocol.swift */; };
@@ -26,8 +24,6 @@
 		A761B92B20D493D000F81F86 /* ContainerViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B92A20D493D000F81F86 /* ContainerViewControllerProtocol.swift */; };
 		A761B92D20D494AA00F81F86 /* ContainerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B92C20D494AA00F81F86 /* ContainerInteractor.swift */; };
 		A761B92F20D494B500F81F86 /* ContainerInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B92E20D494B500F81F86 /* ContainerInteractorProtocol.swift */; };
-		A761B93220D4992D00F81F86 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93120D4992D00F81F86 /* MapRouter.swift */; };
-		A761B93420D4993500F81F86 /* MapRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93320D4993500F81F86 /* MapRouterProtocol.swift */; };
 		A761B93620D4993E00F81F86 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93520D4993E00F81F86 /* MapPresenter.swift */; };
 		A761B93820D4994D00F81F86 /* MapPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93720D4994D00F81F86 /* MapPresenterProtocol.swift */; };
 		A761B93E20D49AF500F81F86 /* MapViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93D20D49AF500F81F86 /* MapViewControllerProtocol.swift */; };
@@ -52,6 +48,9 @@
 		A761B96F20D8AC6100F81F86 /* PreviewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B96E20D8AC6100F81F86 /* PreviewRouter.swift */; };
 		A761B97120D9269E00F81F86 /* DecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B97020D9269E00F81F86 /* DecodingError.swift */; };
 		A761B97320D9275200F81F86 /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B97220D9275200F81F86 /* GenericError.swift */; };
+		A76348E620DEAC0600AD883A /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76348E520DEAC0600AD883A /* Loadable.swift */; };
+		A76348EE20E727B600AD883A /* PreviewPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76348ED20E727B600AD883A /* PreviewPresenterProtocol.swift */; };
+		A76348F020E7280200AD883A /* PreviewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76348EF20E7280200AD883A /* PreviewPresenter.swift */; };
 		A7A16A2020D1DAFD003E1830 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A1F20D1DAFD003E1830 /* AppDelegate.swift */; };
 		A7A16A2220D1DAFD003E1830 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A2120D1DAFD003E1830 /* ListViewController.swift */; };
 		A7A16A2420D1DAFD003E1830 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A2320D1DAFD003E1830 /* MapViewController.swift */; };
@@ -91,8 +90,6 @@
 		A7190B4520D4751B003D62A5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A7190B4C20D4802C003D62A5 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		A7190B4F20D4804D003D62A5 /* RootRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouterProtocol.swift; sourceTree = "<group>"; };
-		A7190B5220D480F7003D62A5 /* ListRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterProtocol.swift; sourceTree = "<group>"; };
-		A7190B5420D48104003D62A5 /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
 		A761B90420D4884200F81F86 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		A761B90820D48B9100F81F86 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		A761B90A20D48BA800F81F86 /* ListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -104,8 +101,6 @@
 		A761B92A20D493D000F81F86 /* ContainerViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerProtocol.swift; sourceTree = "<group>"; };
 		A761B92C20D494AA00F81F86 /* ContainerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerInteractor.swift; sourceTree = "<group>"; };
 		A761B92E20D494B500F81F86 /* ContainerInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerInteractorProtocol.swift; sourceTree = "<group>"; };
-		A761B93120D4992D00F81F86 /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
-		A761B93320D4993500F81F86 /* MapRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouterProtocol.swift; sourceTree = "<group>"; };
 		A761B93520D4993E00F81F86 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
 		A761B93720D4994D00F81F86 /* MapPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenterProtocol.swift; sourceTree = "<group>"; };
 		A761B93D20D49AF500F81F86 /* MapViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerProtocol.swift; sourceTree = "<group>"; };
@@ -130,6 +125,9 @@
 		A761B96E20D8AC6100F81F86 /* PreviewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewRouter.swift; sourceTree = "<group>"; };
 		A761B97020D9269E00F81F86 /* DecodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingError.swift; sourceTree = "<group>"; };
 		A761B97220D9275200F81F86 /* GenericError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericError.swift; sourceTree = "<group>"; };
+		A76348E520DEAC0600AD883A /* Loadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		A76348ED20E727B600AD883A /* PreviewPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPresenterProtocol.swift; sourceTree = "<group>"; };
+		A76348EF20E7280200AD883A /* PreviewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPresenter.swift; sourceTree = "<group>"; };
 		A7A16A1C20D1DAFD003E1830 /* OpenWeatherTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeatherTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A16A1F20D1DAFD003E1830 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7A16A2120D1DAFD003E1830 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -204,7 +202,6 @@
 			isa = PBXGroup;
 			children = (
 				A7190B3720D1F2BC003D62A5 /* Presenter */,
-				A7190B5120D480E9003D62A5 /* Router */,
 				A7190B3620D1F2B4003D62A5 /* View */,
 			);
 			path = List;
@@ -234,7 +231,6 @@
 			children = (
 				A761B95620D74E5700F81F86 /* Model */,
 				A7190B3B20D1F2D3003D62A5 /* Presenter */,
-				A761B93020D495EE00F81F86 /* Router */,
 				A7190B3C20D1F2D7003D62A5 /* View */,
 			);
 			path = Map;
@@ -273,6 +269,7 @@
 		A7190B3E20D46ED1003D62A5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A749E5DE20D9E492002FDDCF /* Protocols */,
 				A761B95D20D8878C00F81F86 /* Error */,
 				A761B94320D4A79800F81F86 /* Model */,
 				A7190B4120D46F5F003D62A5 /* Constants.swift */,
@@ -300,13 +297,12 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		A7190B5120D480E9003D62A5 /* Router */ = {
+		A749E5DE20D9E492002FDDCF /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				A7190B5420D48104003D62A5 /* ListRouter.swift */,
-				A7190B5220D480F7003D62A5 /* ListRouterProtocol.swift */,
+				A76348E520DEAC0600AD883A /* Loadable.swift */,
 			);
-			path = Router;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		A761B90220D4881F00F81F86 /* Container */ = {
@@ -356,15 +352,6 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		A761B93020D495EE00F81F86 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				A761B93120D4992D00F81F86 /* MapRouter.swift */,
-				A761B93320D4993500F81F86 /* MapRouterProtocol.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
 		A761B94320D4A79800F81F86 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,10 +377,10 @@
 		A761B95D20D8878C00F81F86 /* Error */ = {
 			isa = PBXGroup;
 			children = (
-				A761B95E20D887D500F81F86 /* NetworkError.swift */,
-				A761B96120D88E4700F81F86 /* Error+Code.swift */,
 				A761B97020D9269E00F81F86 /* DecodingError.swift */,
+				A761B96120D88E4700F81F86 /* Error+Code.swift */,
 				A761B97220D9275200F81F86 /* GenericError.swift */,
+				A761B95E20D887D500F81F86 /* NetworkError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -401,8 +388,9 @@
 		A761B96520D8A5D100F81F86 /* PreviewViewController */ = {
 			isa = PBXGroup;
 			children = (
-				A761B96720D8A5E700F81F86 /* View */,
+				A76348EC20E7279700AD883A /* Presenter */,
 				A761B96620D8A5E200F81F86 /* Router */,
+				A761B96720D8A5E700F81F86 /* View */,
 			);
 			path = PreviewViewController;
 			sourceTree = "<group>";
@@ -423,6 +411,15 @@
 				A761B96A20D8A64D00F81F86 /* PreviewViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A76348EC20E7279700AD883A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A76348ED20E727B600AD883A /* PreviewPresenterProtocol.swift */,
+				A76348EF20E7280200AD883A /* PreviewPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		A7A16A1320D1DAFD003E1830 = {
@@ -450,12 +447,12 @@
 		A7A16A1E20D1DAFD003E1830 /* OpenWeatherTest */ = {
 			isa = PBXGroup;
 			children = (
-				A761B96520D8A5D100F81F86 /* PreviewViewController */,
 				A7190B3D20D1F2E6003D62A5 /* Application */,
 				A7190B3E20D46ED1003D62A5 /* Common */,
 				A761B90220D4881F00F81F86 /* Container */,
 				A7190B3520D1F2AA003D62A5 /* List */,
 				A7190B3920D1F2CA003D62A5 /* Map */,
+				A761B96520D8A5D100F81F86 /* PreviewViewController */,
 				A7190B4A20D47FEF003D62A5 /* Root */,
 			);
 			path = OpenWeatherTest;
@@ -716,7 +713,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A761B95120D54D1000F81F86 /* CloudInformation.swift in Sources */,
-				A761B93220D4992D00F81F86 /* MapRouter.swift in Sources */,
 				A761B95520D5A9EB00F81F86 /* UnitHelper.swift in Sources */,
 				A761B94D20D4AE2500F81F86 /* Weather.swift in Sources */,
 				A761B92820D493A800F81F86 /* ContainerRouter.swift in Sources */,
@@ -730,7 +726,9 @@
 				A761B97320D9275200F81F86 /* GenericError.swift in Sources */,
 				A761B96920D8A60500F81F86 /* PreviewViewControllerProtocol.swift in Sources */,
 				A761B96D20D8AC3D00F81F86 /* PreviewRouterProtocol.swift in Sources */,
+				A76348EE20E727B600AD883A /* PreviewPresenterProtocol.swift in Sources */,
 				A761B93820D4994D00F81F86 /* MapPresenterProtocol.swift in Sources */,
+				A76348F020E7280200AD883A /* PreviewPresenter.swift in Sources */,
 				A761B92620D4939D00F81F86 /* ContainerRouterProtocol.swift in Sources */,
 				A7190B4020D46F00003D62A5 /* NetworkManager.swift in Sources */,
 				A761B93620D4993E00F81F86 /* MapPresenter.swift in Sources */,
@@ -739,15 +737,13 @@
 				A761B94B20D4ABEF00F81F86 /* Wind.swift in Sources */,
 				A761B95820D74E6400F81F86 /* MapAnnotation.swift in Sources */,
 				A761B90B20D48BA800F81F86 /* ListPresenterProtocol.swift in Sources */,
-				A761B93420D4993500F81F86 /* MapRouterProtocol.swift in Sources */,
 				A761B96B20D8A64D00F81F86 /* PreviewViewController.swift in Sources */,
 				A761B97120D9269E00F81F86 /* DecodingError.swift in Sources */,
 				A761B94F20D54C1C00F81F86 /* MainInformation.swift in Sources */,
-				A7190B5520D48104003D62A5 /* ListRouter.swift in Sources */,
+				A76348E620DEAC0600AD883A /* Loadable.swift in Sources */,
 				A761B92B20D493D000F81F86 /* ContainerViewControllerProtocol.swift in Sources */,
 				A761B94920D4A98900F81F86 /* Coordinates.swift in Sources */,
 				A7A16A2420D1DAFD003E1830 /* MapViewController.swift in Sources */,
-				A7190B5320D480F7003D62A5 /* ListRouterProtocol.swift in Sources */,
 				A7A16A2020D1DAFD003E1830 /* AppDelegate.swift in Sources */,
 				A761B94520D4A7BA00F81F86 /* WeatherList.swift in Sources */,
 				A7190B5020D4804D003D62A5 /* RootRouterProtocol.swift in Sources */,

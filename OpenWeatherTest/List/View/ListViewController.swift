@@ -64,7 +64,8 @@ class ListViewController: UIViewController, ListViewControllerProtocol, UIViewCo
     }
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
-        
+        guard let previewViewController = viewControllerToCommit as? PreviewViewController else { return }
+        self.presenter.router.showPreviewViewController(previewViewController: previewViewController)
     }
     
 }
