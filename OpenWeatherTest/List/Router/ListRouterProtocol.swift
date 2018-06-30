@@ -10,6 +10,8 @@ import CoreLocation
 
 protocol ListRouterProtocol: class {
     var viewController: ListViewController? { get set }
-    static func build() -> ListViewController
+    var containerRouter: ContainerRouterProtocol? { get set }
+    
+    static func build(containerRouter: ContainerRouterProtocol) -> ListViewController
     func prepareForceTouchPreview(cityInformation: CityInformation, currentLocation: CLLocation, selectedUnit: TemperatureUnit) -> PreviewViewController
 }

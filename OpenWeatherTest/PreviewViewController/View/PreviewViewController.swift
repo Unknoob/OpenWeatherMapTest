@@ -27,16 +27,21 @@ class PreviewViewController: UIViewController, PreviewViewControllerProtocol {
     @IBOutlet weak var airHumidityLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
+    var presenter: PreviewPresenterProtocol!
     var cityInformation: CityInformation!
     var currentLocation: CLLocation!
     var selectedUnit: TemperatureUnit!
     
     override var previewActionItems: [UIPreviewActionItem] {
+        let showAction = UIPreviewAction(title: "Show on map", style: .default) { _, _ in
+            self.presenter.selectAnnotation(for: self.cityInformation)
+        }
+        
         let dismissAction = UIPreviewAction(title: "Dismiss", style: .destructive) { _, _ in
             
         }
         
-        return [dismissAction]
+        return [showAction, dismissAction]
     }
     
     override func viewDidLoad() {

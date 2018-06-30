@@ -10,8 +10,9 @@ import CoreLocation
 
 protocol MapPresenterProtocol: class {
     var viewController: MapViewControllerProtocol! { get set }
-    var router: MapRouterProtocol! { get set }
+    var router: ContainerRouterProtocol! { get set }
     
+    func selectAnnotation(for cityInformation: CityInformation)
     func cityInformationUpdated(cityInformation: [CityInformation])
     func locationUpdated(location: CLLocation)
 }

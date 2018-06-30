@@ -53,6 +53,8 @@
 		A761B97120D9269E00F81F86 /* DecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B97020D9269E00F81F86 /* DecodingError.swift */; };
 		A761B97320D9275200F81F86 /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B97220D9275200F81F86 /* GenericError.swift */; };
 		A76348E620DEAC0600AD883A /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76348E520DEAC0600AD883A /* Loadable.swift */; };
+		A76348EE20E727B600AD883A /* PreviewPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76348ED20E727B600AD883A /* PreviewPresenterProtocol.swift */; };
+		A76348F020E7280200AD883A /* PreviewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76348EF20E7280200AD883A /* PreviewPresenter.swift */; };
 		A7A16A2020D1DAFD003E1830 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A1F20D1DAFD003E1830 /* AppDelegate.swift */; };
 		A7A16A2220D1DAFD003E1830 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A2120D1DAFD003E1830 /* ListViewController.swift */; };
 		A7A16A2420D1DAFD003E1830 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16A2320D1DAFD003E1830 /* MapViewController.swift */; };
@@ -132,6 +134,8 @@
 		A761B97020D9269E00F81F86 /* DecodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingError.swift; sourceTree = "<group>"; };
 		A761B97220D9275200F81F86 /* GenericError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericError.swift; sourceTree = "<group>"; };
 		A76348E520DEAC0600AD883A /* Loadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		A76348ED20E727B600AD883A /* PreviewPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPresenterProtocol.swift; sourceTree = "<group>"; };
+		A76348EF20E7280200AD883A /* PreviewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPresenter.swift; sourceTree = "<group>"; };
 		A7A16A1C20D1DAFD003E1830 /* OpenWeatherTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeatherTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A16A1F20D1DAFD003E1830 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7A16A2120D1DAFD003E1830 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -412,8 +416,9 @@
 		A761B96520D8A5D100F81F86 /* PreviewViewController */ = {
 			isa = PBXGroup;
 			children = (
-				A761B96720D8A5E700F81F86 /* View */,
+				A76348EC20E7279700AD883A /* Presenter */,
 				A761B96620D8A5E200F81F86 /* Router */,
+				A761B96720D8A5E700F81F86 /* View */,
 			);
 			path = PreviewViewController;
 			sourceTree = "<group>";
@@ -434,6 +439,15 @@
 				A761B96A20D8A64D00F81F86 /* PreviewViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A76348EC20E7279700AD883A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A76348ED20E727B600AD883A /* PreviewPresenterProtocol.swift */,
+				A76348EF20E7280200AD883A /* PreviewPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		A7A16A1320D1DAFD003E1830 = {
@@ -741,7 +755,9 @@
 				A761B97320D9275200F81F86 /* GenericError.swift in Sources */,
 				A761B96920D8A60500F81F86 /* PreviewViewControllerProtocol.swift in Sources */,
 				A761B96D20D8AC3D00F81F86 /* PreviewRouterProtocol.swift in Sources */,
+				A76348EE20E727B600AD883A /* PreviewPresenterProtocol.swift in Sources */,
 				A761B93820D4994D00F81F86 /* MapPresenterProtocol.swift in Sources */,
+				A76348F020E7280200AD883A /* PreviewPresenter.swift in Sources */,
 				A761B92620D4939D00F81F86 /* ContainerRouterProtocol.swift in Sources */,
 				A7190B4020D46F00003D62A5 /* NetworkManager.swift in Sources */,
 				A761B93620D4993E00F81F86 /* MapPresenter.swift in Sources */,

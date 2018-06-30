@@ -7,5 +7,5 @@
 //
 
 protocol PreviewViewControllerProtocol: class {
-//    var presenter: PreviewPresenterProtocol! { get set }
+    var presenter: PreviewPresenterProtocol! { get set }
 }

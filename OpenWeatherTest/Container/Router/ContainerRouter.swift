@@ -7,19 +7,20 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ContainerRouter: ContainerRouterProtocol {
     weak var viewController: ContainerViewController?
     
     static func build() -> ContainerViewController {
         let containerViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ContainerViewController") as! ContainerViewController
-        
-        containerViewController.listViewController = ListRouter.build()
-        containerViewController.mapViewController = MapRouter.build()
-        
+    
         let presenter = ContainerPresenter()
         let interactor = ContainerInteractor()
         let router = ContainerRouter()
+        
+        containerViewController.listViewController = buildListViewController(router: router)
+        containerViewController.mapViewController = buildMapViewController(router: router)
         
         router.viewController = containerViewController
         
@@ -34,6 +35,32 @@ class ContainerRouter: ContainerRouterProtocol {
         presenter.router = router
         
         return containerViewController
+    }
+    
+    private static func buildMapViewController(router: ContainerRouterProtocol) -> MapViewController {
+        let mapViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+
+        let presenter = MapPresenter()
+
+        mapViewController.presenter = presenter
+
+        presenter.viewController = mapViewController
+        presenter.router = router
+
+        return mapViewController
+    }
+
+    private static func buildListViewController(router: ContainerRouterProtocol) -> ListViewController {
+        let listViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ListViewController") as! ListViewController
+
+        let presenter = ListPresenter()
+
+        listViewController.presenter = presenter
+
+        presenter.viewController = listViewController
+        presenter.router = router
+
+        return listViewController
     }
     
     func showErrorMessage(error: GenericError, okBlock: @escaping () -> (), retryBlock: @escaping () -> ()) {
@@ -68,4 +95,14 @@ class ContainerRouter: ContainerRouterProtocol {
         
         viewController?.present(alertController, animated: true, completion: nil)
     }
+    
+    func prepareForceTouchPreview(cityInformation: CityInformation, currentLocation: CLLocation, selectedUnit: TemperatureUnit) -> PreviewViewController {
+        return PreviewRouter.build(containerRouter: self, cityInformation: cityInformation, currentLocation: currentLocation, selectedUnit: selectedUnit)
+    }
+    
+    func selectAnnotation(for cityInformation: CityInformation) {
+        viewController?.showMap()
+        viewController?.mapViewController.presenter.selectAnnotation(for: cityInformation)
+    }
+    
 }

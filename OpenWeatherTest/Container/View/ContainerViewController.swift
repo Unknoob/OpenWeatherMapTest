@@ -47,38 +47,46 @@ class ContainerViewController: UIViewController, ContainerViewControllerProtocol
         super.didReceiveMemoryWarning()
     }
     
+    func showMap() {
+        listViewController.willMove(toParentViewController: nil)
+        listViewController.view.removeFromSuperview()
+        listViewController.removeFromParentViewController()
+        
+        addChildViewController(mapViewController)
+        
+        containerView.addSubview(mapViewController.view)
+        mapViewController.view.frame = containerView.bounds
+        mapViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        mapViewController.didMove(toParentViewController: self)
+        
+        customNavigation.title = activeView.rawValue
+        activeView = .list
+        listingToggleButton.image = #imageLiteral(resourceName: "list_icon")
+    }
+    
+    func showList() {
+        mapViewController.willMove(toParentViewController: nil)
+        mapViewController.view.removeFromSuperview()
+        mapViewController.removeFromParentViewController()
+        
+        addChildViewController(listViewController)
+        
+        containerView.addSubview(listViewController.view)
+        listViewController.view.frame = containerView.bounds
+        listViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        listViewController.didMove(toParentViewController: self)
+        
+        customNavigation.title = activeView.rawValue
+        activeView = .map
+        listingToggleButton.image = #imageLiteral(resourceName: "map_icon")
+    }
+    
     @IBAction func toggleListingType(_ sender: Any) {
         switch activeView {
         case .list:
-            mapViewController.willMove(toParentViewController: nil)
-            mapViewController.view.removeFromSuperview()
-            mapViewController.removeFromParentViewController()
-            
-            addChildViewController(listViewController)
-            
-            containerView.addSubview(listViewController.view)
-            listViewController.view.frame = containerView.bounds
-            listViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            listViewController.didMove(toParentViewController: self)
-            
-            customNavigation.title = activeView.rawValue
-            activeView = .map
-            listingToggleButton.image = #imageLiteral(resourceName: "map_icon")
+           showList()
         case .map:
-            listViewController.willMove(toParentViewController: nil)
-            listViewController.view.removeFromSuperview()
-            listViewController.removeFromParentViewController()
-            
-            addChildViewController(mapViewController)
-            
-            containerView.addSubview(mapViewController.view)
-            mapViewController.view.frame = containerView.bounds
-            mapViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            mapViewController.didMove(toParentViewController: self)
-            
-            customNavigation.title = activeView.rawValue
-            activeView = .list
-            listingToggleButton.image = #imageLiteral(resourceName: "list_icon")
+            showMap()
         }
     }
     
