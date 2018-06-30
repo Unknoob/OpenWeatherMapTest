@@ -9,7 +9,12 @@
 import Foundation
 import Kingfisher
 
+/// Helper for Kingfisher related functions.
 class KingfisherHelper {
+    /// Generates the full URL for a given icon name.
+    /// - Parameters:
+    ///     - imageName: The code of the icon we want to fetch.
+    ///  - Returns: The full URL for the given icon code.
     static func generateURL(fromImageName imageName: String) -> URL? {
         guard let url = URL(string: "https://openweathermap.org/img/w/\(imageName)\(".png")") else {
             return nil

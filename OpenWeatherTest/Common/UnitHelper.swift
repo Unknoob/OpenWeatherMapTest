@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Helper for measuring unit related functions, such as formatting and conversion.
 class UnitHelper {
     static func kelvinToCelsius(_ kelvinTemp: Double) -> String {
         return String(format: "%.0f%@", kelvinTemp - 273.15, "ºC")
