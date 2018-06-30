@@ -7,6 +7,7 @@
 //
 
 import CoreLocation
+import UIKit
 
 protocol PreviewRouterProtocol: class {
     var viewController: PreviewViewController? { get set }
@@ -15,5 +16,7 @@ protocol PreviewRouterProtocol: class {
     static func build(containerRouter: ContainerRouterProtocol, cityInformation: CityInformation, currentLocation: CLLocation, selectedUnit: TemperatureUnit) -> PreviewViewController
     
     func selectAnnotation(for cityInformation: CityInformation)
+    
+    func dismiss()
 }
 

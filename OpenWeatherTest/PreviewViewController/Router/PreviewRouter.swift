@@ -36,4 +36,8 @@ class PreviewRouter: PreviewRouterProtocol {
     func selectAnnotation(for cityInformation: CityInformation) {
         containerRouter?.selectAnnotation(for: cityInformation)
     }
+    
+    func dismiss() {
+        viewController?.dismiss(animated: true, completion: nil)
+    }
 }

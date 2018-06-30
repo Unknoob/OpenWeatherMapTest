@@ -100,9 +100,13 @@ class ContainerRouter: ContainerRouterProtocol {
         return PreviewRouter.build(containerRouter: self, cityInformation: cityInformation, currentLocation: currentLocation, selectedUnit: selectedUnit)
     }
     
+    func showPreviewViewController(previewViewController: PreviewViewController) {
+        previewViewController.showCloseButton(true)
+        viewController?.present(previewViewController, animated: false, completion: nil)
+    }
+    
     func selectAnnotation(for cityInformation: CityInformation) {
         viewController?.showMap()
         viewController?.mapViewController.presenter.selectAnnotation(for: cityInformation)
     }
-    
 }

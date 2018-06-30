@@ -7,6 +7,7 @@
 //
 
 import CoreLocation
+import UIKit
 
 protocol ContainerRouterProtocol: class {
     var viewController: ContainerViewController? { get set }
@@ -15,6 +16,7 @@ protocol ContainerRouterProtocol: class {
     func showErrorAndSendToSettings()
     
     func prepareForceTouchPreview(cityInformation: CityInformation, currentLocation: CLLocation, selectedUnit: TemperatureUnit) -> PreviewViewController
+    func showPreviewViewController(previewViewController: PreviewViewController)
     func selectAnnotation(for cityInformation: CityInformation)
 }
 

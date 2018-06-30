@@ -13,8 +13,6 @@
 		A7190B4620D4751B003D62A5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7190B4520D4751B003D62A5 /* MapKit.framework */; };
 		A7190B4D20D4802C003D62A5 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7190B4C20D4802C003D62A5 /* RootRouter.swift */; };
 		A7190B5020D4804D003D62A5 /* RootRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7190B4F20D4804D003D62A5 /* RootRouterProtocol.swift */; };
-		A7190B5320D480F7003D62A5 /* ListRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7190B5220D480F7003D62A5 /* ListRouterProtocol.swift */; };
-		A7190B5520D48104003D62A5 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7190B5420D48104003D62A5 /* ListRouter.swift */; };
 		A761B90520D4884200F81F86 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B90420D4884200F81F86 /* ContainerViewController.swift */; };
 		A761B90920D48B9100F81F86 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B90820D48B9100F81F86 /* ListPresenter.swift */; };
 		A761B90B20D48BA800F81F86 /* ListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B90A20D48BA800F81F86 /* ListPresenterProtocol.swift */; };
@@ -26,8 +24,6 @@
 		A761B92B20D493D000F81F86 /* ContainerViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B92A20D493D000F81F86 /* ContainerViewControllerProtocol.swift */; };
 		A761B92D20D494AA00F81F86 /* ContainerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B92C20D494AA00F81F86 /* ContainerInteractor.swift */; };
 		A761B92F20D494B500F81F86 /* ContainerInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B92E20D494B500F81F86 /* ContainerInteractorProtocol.swift */; };
-		A761B93220D4992D00F81F86 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93120D4992D00F81F86 /* MapRouter.swift */; };
-		A761B93420D4993500F81F86 /* MapRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93320D4993500F81F86 /* MapRouterProtocol.swift */; };
 		A761B93620D4993E00F81F86 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93520D4993E00F81F86 /* MapPresenter.swift */; };
 		A761B93820D4994D00F81F86 /* MapPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93720D4994D00F81F86 /* MapPresenterProtocol.swift */; };
 		A761B93E20D49AF500F81F86 /* MapViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761B93D20D49AF500F81F86 /* MapViewControllerProtocol.swift */; };
@@ -94,8 +90,6 @@
 		A7190B4520D4751B003D62A5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A7190B4C20D4802C003D62A5 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		A7190B4F20D4804D003D62A5 /* RootRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouterProtocol.swift; sourceTree = "<group>"; };
-		A7190B5220D480F7003D62A5 /* ListRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterProtocol.swift; sourceTree = "<group>"; };
-		A7190B5420D48104003D62A5 /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
 		A761B90420D4884200F81F86 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		A761B90820D48B9100F81F86 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		A761B90A20D48BA800F81F86 /* ListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -107,8 +101,6 @@
 		A761B92A20D493D000F81F86 /* ContainerViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerProtocol.swift; sourceTree = "<group>"; };
 		A761B92C20D494AA00F81F86 /* ContainerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerInteractor.swift; sourceTree = "<group>"; };
 		A761B92E20D494B500F81F86 /* ContainerInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerInteractorProtocol.swift; sourceTree = "<group>"; };
-		A761B93120D4992D00F81F86 /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
-		A761B93320D4993500F81F86 /* MapRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouterProtocol.swift; sourceTree = "<group>"; };
 		A761B93520D4993E00F81F86 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
 		A761B93720D4994D00F81F86 /* MapPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenterProtocol.swift; sourceTree = "<group>"; };
 		A761B93D20D49AF500F81F86 /* MapViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerProtocol.swift; sourceTree = "<group>"; };
@@ -210,7 +202,6 @@
 			isa = PBXGroup;
 			children = (
 				A7190B3720D1F2BC003D62A5 /* Presenter */,
-				A7190B5120D480E9003D62A5 /* Router */,
 				A7190B3620D1F2B4003D62A5 /* View */,
 			);
 			path = List;
@@ -240,7 +231,6 @@
 			children = (
 				A761B95620D74E5700F81F86 /* Model */,
 				A7190B3B20D1F2D3003D62A5 /* Presenter */,
-				A761B93020D495EE00F81F86 /* Router */,
 				A7190B3C20D1F2D7003D62A5 /* View */,
 			);
 			path = Map;
@@ -307,15 +297,6 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		A7190B5120D480E9003D62A5 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				A7190B5420D48104003D62A5 /* ListRouter.swift */,
-				A7190B5220D480F7003D62A5 /* ListRouterProtocol.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
 		A749E5DE20D9E492002FDDCF /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,15 +350,6 @@
 				A761B92E20D494B500F81F86 /* ContainerInteractorProtocol.swift */,
 			);
 			path = Interactor;
-			sourceTree = "<group>";
-		};
-		A761B93020D495EE00F81F86 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				A761B93120D4992D00F81F86 /* MapRouter.swift */,
-				A761B93320D4993500F81F86 /* MapRouterProtocol.swift */,
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 		A761B94320D4A79800F81F86 /* Model */ = {
@@ -741,7 +713,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A761B95120D54D1000F81F86 /* CloudInformation.swift in Sources */,
-				A761B93220D4992D00F81F86 /* MapRouter.swift in Sources */,
 				A761B95520D5A9EB00F81F86 /* UnitHelper.swift in Sources */,
 				A761B94D20D4AE2500F81F86 /* Weather.swift in Sources */,
 				A761B92820D493A800F81F86 /* ContainerRouter.swift in Sources */,
@@ -766,16 +737,13 @@
 				A761B94B20D4ABEF00F81F86 /* Wind.swift in Sources */,
 				A761B95820D74E6400F81F86 /* MapAnnotation.swift in Sources */,
 				A761B90B20D48BA800F81F86 /* ListPresenterProtocol.swift in Sources */,
-				A761B93420D4993500F81F86 /* MapRouterProtocol.swift in Sources */,
 				A761B96B20D8A64D00F81F86 /* PreviewViewController.swift in Sources */,
 				A761B97120D9269E00F81F86 /* DecodingError.swift in Sources */,
 				A761B94F20D54C1C00F81F86 /* MainInformation.swift in Sources */,
-				A7190B5520D48104003D62A5 /* ListRouter.swift in Sources */,
 				A76348E620DEAC0600AD883A /* Loadable.swift in Sources */,
 				A761B92B20D493D000F81F86 /* ContainerViewControllerProtocol.swift in Sources */,
 				A761B94920D4A98900F81F86 /* Coordinates.swift in Sources */,
 				A7A16A2420D1DAFD003E1830 /* MapViewController.swift in Sources */,
-				A7190B5320D480F7003D62A5 /* ListRouterProtocol.swift in Sources */,
 				A7A16A2020D1DAFD003E1830 /* AppDelegate.swift in Sources */,
 				A761B94520D4A7BA00F81F86 /* WeatherList.swift in Sources */,
 				A7190B5020D4804D003D62A5 /* RootRouterProtocol.swift in Sources */,
